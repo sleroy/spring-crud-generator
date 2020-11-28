@@ -1,0 +1,1 @@
+package com.byoskill.tools.springcrudgenerator.entityscanner;
