@@ -30,8 +30,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "precision" : "18",
               "unique" : "true",
+              "precision" : "18",
               "name" : "\"PAYMENT_ID\"",
               "length" : "255",
               "updatable" : "true",
@@ -70,8 +70,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "precision" : "36",
               "unique" : "true",
+              "precision" : "36",
               "name" : "\"PAYMENT_UUID\"",
               "length" : "255",
               "updatable" : "false",
@@ -101,8 +101,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"APPLICATION_CODE\"",
               "length" : "50",
               "updatable" : "true",
@@ -142,8 +142,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"REQUESTOR_ID\"",
               "length" : "60",
               "updatable" : "true",
@@ -173,8 +173,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"AMOUNT\"",
               "length" : "255",
               "updatable" : "true",
@@ -214,8 +214,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"BAID\"",
               "length" : "60",
               "updatable" : "true",
@@ -255,8 +255,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"TRANSACTION_ID\"",
               "length" : "32",
               "updatable" : "true",
@@ -286,8 +286,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"MSISDN\"",
               "length" : "11",
               "updatable" : "true",
@@ -317,8 +317,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"ORDER_ID\"",
               "length" : "60",
               "updatable" : "true",
@@ -348,8 +348,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"OPERATOR_ID\"",
               "length" : "50",
               "updatable" : "true",
@@ -379,8 +379,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"CHANNEL_CODE\"",
               "length" : "25",
               "updatable" : "true",
@@ -420,8 +420,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"CREATION_DATE\"",
               "length" : "7",
               "updatable" : "true",
@@ -451,8 +451,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"LAST_UPDATE_DATE\"",
               "length" : "7",
               "updatable" : "true",
@@ -482,8 +482,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"ERROR_CODE\"",
               "length" : "10",
               "updatable" : "true",
@@ -513,8 +513,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"ERROR_MESSAGE\"",
               "length" : "255",
               "updatable" : "true",
@@ -544,8 +544,8 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "precision" : "0",
               "unique" : "false",
+              "precision" : "0",
               "name" : "\"ERROR_DETAIL\"",
               "length" : "255",
               "updatable" : "true",
@@ -594,9 +594,13 @@
           "canonicalName" : "com.byoskill.tools.example.Credentials"
         } ],
         "rawtype" : {
-          "signature" : "!!cannot be parsed!!",
-          "variant" : "unparseable"
-        }
+          "signature" : "java.util.List",
+          "variant" : "class",
+          "simpleName" : "List",
+          "packageName" : "java.util",
+          "canonicalName" : "java.util.List"
+        },
+        "ownerType" : null
       }
     } ],
     "annotations" : {
@@ -636,8 +640,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "18",
                 "unique" : "true",
+                "precision" : "18",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -676,8 +680,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "36",
                 "unique" : "true",
+                "precision" : "36",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
                 "updatable" : "false",
@@ -707,8 +711,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -748,8 +752,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -779,8 +783,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -820,8 +824,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"BAID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -861,8 +865,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
                 "updatable" : "true",
@@ -892,8 +896,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
                 "updatable" : "true",
@@ -923,8 +927,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -954,8 +958,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -985,8 +989,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
                 "updatable" : "true",
@@ -1026,8 +1030,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -1057,8 +1061,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -1088,8 +1092,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
                 "updatable" : "true",
@@ -1119,8 +1123,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -1150,8 +1154,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -1200,9 +1204,13 @@
             "canonicalName" : "com.byoskill.tools.example.Credentials"
           } ],
           "rawtype" : {
-            "signature" : "!!cannot be parsed!!",
-            "variant" : "unparseable"
-          }
+            "signature" : "java.util.List",
+            "variant" : "class",
+            "simpleName" : "List",
+            "packageName" : "java.util",
+            "canonicalName" : "java.util.List"
+          },
+          "ownerType" : null
         }
       } ],
       "annotations" : {
@@ -1243,8 +1251,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "18",
                   "unique" : "true",
+                  "precision" : "18",
                   "name" : "\"PAYMENT_ID\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -1283,8 +1291,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "36",
                   "unique" : "true",
+                  "precision" : "36",
                   "name" : "\"PAYMENT_UUID\"",
                   "length" : "255",
                   "updatable" : "false",
@@ -1314,8 +1322,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"APPLICATION_CODE\"",
                   "length" : "50",
                   "updatable" : "true",
@@ -1355,8 +1363,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"REQUESTOR_ID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -1386,8 +1394,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"AMOUNT\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -1427,8 +1435,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"BAID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -1468,8 +1476,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"TRANSACTION_ID\"",
                   "length" : "32",
                   "updatable" : "true",
@@ -1499,8 +1507,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"MSISDN\"",
                   "length" : "11",
                   "updatable" : "true",
@@ -1530,8 +1538,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ORDER_ID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -1561,8 +1569,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"OPERATOR_ID\"",
                   "length" : "50",
                   "updatable" : "true",
@@ -1592,8 +1600,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"CHANNEL_CODE\"",
                   "length" : "25",
                   "updatable" : "true",
@@ -1633,8 +1641,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"CREATION_DATE\"",
                   "length" : "7",
                   "updatable" : "true",
@@ -1664,8 +1672,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"LAST_UPDATE_DATE\"",
                   "length" : "7",
                   "updatable" : "true",
@@ -1695,8 +1703,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_CODE\"",
                   "length" : "10",
                   "updatable" : "true",
@@ -1726,8 +1734,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_MESSAGE\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -1757,8 +1765,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_DETAIL\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -1807,9 +1815,13 @@
               "canonicalName" : "com.byoskill.tools.example.Credentials"
             } ],
             "rawtype" : {
-              "signature" : "!!cannot be parsed!!",
-              "variant" : "unparseable"
-            }
+              "signature" : "java.util.List",
+              "variant" : "class",
+              "simpleName" : "List",
+              "packageName" : "java.util",
+              "canonicalName" : "java.util.List"
+            },
+            "ownerType" : null
           }
         } ],
         "annotations" : {
@@ -1848,8 +1860,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "18",
                   "unique" : "true",
+                  "precision" : "18",
                   "name" : "\"PAYMENT_ID\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -1888,8 +1900,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "36",
                   "unique" : "true",
+                  "precision" : "36",
                   "name" : "\"PAYMENT_UUID\"",
                   "length" : "255",
                   "updatable" : "false",
@@ -1919,8 +1931,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"APPLICATION_CODE\"",
                   "length" : "50",
                   "updatable" : "true",
@@ -1960,8 +1972,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"REQUESTOR_ID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -1991,8 +2003,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"AMOUNT\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -2032,8 +2044,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"BAID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -2073,8 +2085,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"TRANSACTION_ID\"",
                   "length" : "32",
                   "updatable" : "true",
@@ -2104,8 +2116,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"MSISDN\"",
                   "length" : "11",
                   "updatable" : "true",
@@ -2135,8 +2147,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ORDER_ID\"",
                   "length" : "60",
                   "updatable" : "true",
@@ -2166,8 +2178,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"OPERATOR_ID\"",
                   "length" : "50",
                   "updatable" : "true",
@@ -2197,8 +2209,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"CHANNEL_CODE\"",
                   "length" : "25",
                   "updatable" : "true",
@@ -2238,8 +2250,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"CREATION_DATE\"",
                   "length" : "7",
                   "updatable" : "true",
@@ -2269,8 +2281,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"LAST_UPDATE_DATE\"",
                   "length" : "7",
                   "updatable" : "true",
@@ -2300,8 +2312,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_CODE\"",
                   "length" : "10",
                   "updatable" : "true",
@@ -2331,8 +2343,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_MESSAGE\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -2362,8 +2374,8 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "precision" : "0",
                   "unique" : "false",
+                  "precision" : "0",
                   "name" : "\"ERROR_DETAIL\"",
                   "length" : "255",
                   "updatable" : "true",
@@ -2422,8 +2434,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "18",
                 "unique" : "true",
+                "precision" : "18",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -2462,8 +2474,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "36",
                 "unique" : "true",
+                "precision" : "36",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
                 "updatable" : "false",
@@ -2493,8 +2505,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -2534,8 +2546,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -2565,8 +2577,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -2606,8 +2618,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"BAID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -2647,8 +2659,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
                 "updatable" : "true",
@@ -2678,8 +2690,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
                 "updatable" : "true",
@@ -2709,8 +2721,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -2740,8 +2752,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -2771,8 +2783,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
                 "updatable" : "true",
@@ -2812,8 +2824,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -2843,8 +2855,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -2874,8 +2886,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
                 "updatable" : "true",
@@ -2905,8 +2917,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -2936,8 +2948,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -2986,9 +2998,13 @@
             "canonicalName" : "com.byoskill.tools.example.Credentials"
           } ],
           "rawtype" : {
-            "signature" : "!!cannot be parsed!!",
-            "variant" : "unparseable"
-          }
+            "signature" : "java.util.List",
+            "variant" : "class",
+            "simpleName" : "List",
+            "packageName" : "java.util",
+            "canonicalName" : "java.util.List"
+          },
+          "ownerType" : null
         }
       } ],
       "annotations" : {
@@ -3027,8 +3043,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "18",
                 "unique" : "true",
+                "precision" : "18",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3067,8 +3083,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "36",
                 "unique" : "true",
+                "precision" : "36",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
                 "updatable" : "false",
@@ -3098,8 +3114,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -3139,8 +3155,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3170,8 +3186,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3211,8 +3227,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"BAID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3252,8 +3268,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
                 "updatable" : "true",
@@ -3283,8 +3299,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
                 "updatable" : "true",
@@ -3314,8 +3330,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3345,8 +3361,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -3376,8 +3392,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
                 "updatable" : "true",
@@ -3417,8 +3433,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -3448,8 +3464,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -3479,8 +3495,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
                 "updatable" : "true",
@@ -3510,8 +3526,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3541,8 +3557,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3599,8 +3615,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "18",
                 "unique" : "true",
+                "precision" : "18",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3639,8 +3655,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "36",
                 "unique" : "true",
+                "precision" : "36",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
                 "updatable" : "false",
@@ -3670,8 +3686,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -3711,8 +3727,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3742,8 +3758,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -3783,8 +3799,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"BAID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3824,8 +3840,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
                 "updatable" : "true",
@@ -3855,8 +3871,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
                 "updatable" : "true",
@@ -3886,8 +3902,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
                 "updatable" : "true",
@@ -3917,8 +3933,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
                 "updatable" : "true",
@@ -3948,8 +3964,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
                 "updatable" : "true",
@@ -3989,8 +4005,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -4020,8 +4036,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
                 "updatable" : "true",
@@ -4051,8 +4067,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
                 "updatable" : "true",
@@ -4082,8 +4098,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -4113,8 +4129,8 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "precision" : "0",
                 "unique" : "false",
+                "precision" : "0",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
                 "updatable" : "true",
@@ -4163,9 +4179,13 @@
             "canonicalName" : "com.byoskill.tools.example.Credentials"
           } ],
           "rawtype" : {
-            "signature" : "!!cannot be parsed!!",
-            "variant" : "unparseable"
-          }
+            "signature" : "java.util.List",
+            "variant" : "class",
+            "simpleName" : "List",
+            "packageName" : "java.util",
+            "canonicalName" : "java.util.List"
+          },
+          "ownerType" : null
         }
       } ],
       "annotations" : {
@@ -4208,9 +4228,13 @@
             "canonicalName" : "com.byoskill.tools.example.Credentials"
           } ],
           "rawtype" : {
-            "signature" : "!!cannot be parsed!!",
-            "variant" : "unparseable"
-          }
+            "signature" : "java.util.List",
+            "variant" : "class",
+            "simpleName" : "List",
+            "packageName" : "java.util",
+            "canonicalName" : "java.util.List"
+          },
+          "ownerType" : null
         }
       } ],
       "annotations" : {

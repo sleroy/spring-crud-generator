@@ -1,6 +1,5 @@
-{{#*inline "fieldPartial"}}
-    private {{javatype field.type}} {{field.name}};
-{{/inline}}
+
+
 
 package {{dto.packageName}};
 
@@ -16,8 +15,16 @@ public class {{dto.simpleName}} {
      * Instantiate a new DTO.
      */
     public {{dto.simpleName}}() {
-    super();
+        super();
     }
+
+    {{#each dto.fields as |field|}}
+    {{> getterPartial field=field}}
+    {{/each}}
+
+    {{#each dto.fields as |field|}}
+    {{> setterPartial field=field}}
+    {{/each}}
 
 
 }

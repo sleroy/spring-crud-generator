@@ -23,6 +23,7 @@ public class ParameterizedTypeInfo extends TypingInfo {
     public static final String           PARAMETERIZED  = "parameterized";
     private final       List<TypingInfo> typeParameters = new ArrayList<>();
     private             TypingInfo       rawtype;
+    private             TypingInfo       ownerType;
 
     public ParameterizedTypeInfo(final String signature) {
         super(signature, PARAMETERIZED);
@@ -31,7 +32,8 @@ public class ParameterizedTypeInfo extends TypingInfo {
     @NotNull
     public static TypingInfo from(@NotNull final ParameterizedType typing) {
         final ParameterizedTypeInfo parameterizedTypeInfo = new ParameterizedTypeInfo(typing.getTypeName());
-        parameterizedTypeInfo.setRawtype(TypeConverter.convert(typing.getOwnerType()));
+        parameterizedTypeInfo.setOwnerType(TypeConverter.convert(typing.getOwnerType()));
+        parameterizedTypeInfo.setRawtype(TypeConverter.convert(typing.getRawType()));
         for (final Type type : typing.getActualTypeArguments()) {
             parameterizedTypeInfo.addTypeParameter(TypeConverter.convert(type));
         }

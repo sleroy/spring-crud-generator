@@ -9,8 +9,8 @@ import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.Clas
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.ParameterizedTypeInfo;
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.TypingInfo;
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.UnparseableTypingInfo;
-import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nullable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
@@ -32,11 +32,12 @@ public class TypeConverter {
      * @param genericType the generic type
      * @return the typing info
      */
-    public static @NotNull TypingInfo convert(final Type genericType) {
+    public static @Nullable TypingInfo convert(final Type genericType) {
         return new TypeConverter(genericType).convert();
     }
 
-    private @NotNull TypingInfo convert() {
+    private @Nullable TypingInfo convert() {
+        if (typing == null) return null;
         if (typing instanceof Class) {
             return ClassTypingInfo.from((Class<?>) typing);
         } else if (typing instanceof ParameterizedType) {

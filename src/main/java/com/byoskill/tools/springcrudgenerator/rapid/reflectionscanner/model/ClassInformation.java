@@ -11,6 +11,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * The type Class information.
+ */
 @Data
 public class ClassInformation implements Serializable {
     private String                 simpleName;
@@ -31,6 +34,7 @@ public class ClassInformation implements Serializable {
         return classInformation;
     }
 
+  
     @JsonIgnore
     public void setClassName(final String packageName, final String simpleName) {
         this.simpleName = simpleName;

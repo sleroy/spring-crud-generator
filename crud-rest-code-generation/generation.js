@@ -25,14 +25,15 @@ Handlebars.registerHelper("javatype", function (type) {
 	if (type.variant == "class") {
 		return type.simpleName;
 	} else if (type.variant == "parameterized") {
-		var tpm = "";
-		for (var t = 0, nt = type.typeParameters.length; t < nt; t++) {
-			tpm = type.typeParameters[t].simpleName + ",";
-		}
-
-		return type.simpleName + " < " + tpm + " >";
+		var tpm = type.typeParameters.map(t => t.simpleName).join(',');		
+		return type.rawtype.simpleName + "<" + tpm + ">";
 	}
 });
+
+Handlebars.registerHelper("capitalize", function (word) {
+	return word[0].toUpperCase() + word.slice(1);
+});
+
 
 log.info("script:Generation of the REST project");
 

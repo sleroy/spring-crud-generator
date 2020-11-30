@@ -5,47 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const log = require('./logger').logger;
 const Template = require('./template-renderer').Template;
-
-
-
-function readCatalog(catalogPath) {
-	let rawdata = fs.readFileSync(catalogPath);
-	return JSON.parse(rawdata);
-}
-
-function readScript(scriptPath) {
-	return  fs.readFileSync(scriptPath, 'utf8')
-}
-
-function codeGeneration(argv) {
-	log.debug('Loading catalog from ', argv.catalog);
-	log.debug('Loading Generation project from ', argv.generation);
-	log.info('Project output path is  ', argv.project);
-
-	log.info('Compilation of the template');
-	try {
-		// Context of the execution
-		const catalog = readCatalog(argv.catalog);
-		const generationInfo = {
-			project: argv.generation,
-			templates: path.join(argv.generation, "templates"),
-			script: path.join(argv.generation, "generation.js")
-		};
-
-        const script = readScript(generationInfo.script);
-        const project = argv.project;
-		const template = new Template(generationInfo);
-		const Handlebars = require("handlebars");
-        
-        log.info('Execution of the code generation script');
-        eval(script);
-
-		
-	} catch (e) {
-		log.error('Cannot generate the code', e);
-	}
-}
-
+const { CodeGeneration } = require('./code-generation');
 
 
 const cli = yargs(hideBin(process.argv));
@@ -62,4 +22,4 @@ cli
 	;
 
 
-codeGeneration(cli.argv);
+new CodeGeneration(cli.argv).generate();
