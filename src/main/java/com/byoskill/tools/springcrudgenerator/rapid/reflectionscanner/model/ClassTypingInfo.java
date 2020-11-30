@@ -16,12 +16,13 @@ import lombok.ToString;
 @Getter
 @Setter
 public class ClassTypingInfo extends TypingInfo {
-    private String simpleName;
-    private String packageName;
-    private String canonicalName;
+    public static final String CLASS = "class";
+    private             String simpleName;
+    private             String packageName;
+    private             String canonicalName;
 
     public ClassTypingInfo(final String signature) {
-        super(signature);
+        super(signature, CLASS);
     }
 
     public static TypingInfo from(final Class<?> clazz) {
@@ -31,4 +32,5 @@ public class ClassTypingInfo extends TypingInfo {
         classTypingInfo.packageName = clazz.getPackageName();
         return classTypingInfo;
     }
+
 }

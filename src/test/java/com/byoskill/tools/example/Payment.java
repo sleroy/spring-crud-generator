@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PositiveOrZero;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -94,4 +95,10 @@ public class Payment implements java.io.Serializable {
      */
     @Column(name = "ERROR_DETAIL")
     private String errorDetail;
+
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Credentials> credentials;
 }

@@ -1,0 +1,4222 @@
+{
+  "entities" : [ {
+    "simpleName" : "Payment",
+    "canonicalName" : "com.byoskill.tools.example.Payment",
+    "modifiers" : 1,
+    "name" : "com.byoskill.tools.example.Payment",
+    "fields" : [ {
+      "modifiers" : 2,
+      "name" : "id",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.GeneratedValue" : {
+            "qualifiedName" : "javax.persistence.GeneratedValue",
+            "simpleName" : "GeneratedValue",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "generator" : "\"\"",
+              "strategy" : "\"AUTO\""
+            }
+          },
+          "javax.persistence.Id" : {
+            "qualifiedName" : "javax.persistence.Id",
+            "simpleName" : "Id",
+            "packageName" : "javax.persistence",
+            "memberValue" : { }
+          },
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "false",
+              "precision" : "18",
+              "unique" : "true",
+              "name" : "\"PAYMENT_ID\"",
+              "length" : "255",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "long",
+        "variant" : "class",
+        "simpleName" : "long",
+        "packageName" : "java.lang",
+        "canonicalName" : "long"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "uuid",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.GeneratedValue" : {
+            "qualifiedName" : "javax.persistence.GeneratedValue",
+            "simpleName" : "GeneratedValue",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "generator" : "\"\"",
+              "strategy" : "\"AUTO\""
+            }
+          },
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "false",
+              "precision" : "36",
+              "unique" : "true",
+              "name" : "\"PAYMENT_UUID\"",
+              "length" : "255",
+              "updatable" : "false",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "applicationCode",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "false",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"APPLICATION_CODE\"",
+              "length" : "50",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          },
+          "javax.validation.constraints.NotBlank" : {
+            "qualifiedName" : "javax.validation.constraints.NotBlank",
+            "simpleName" : "NotBlank",
+            "packageName" : "javax.validation.constraints",
+            "memberValue" : {
+              "payload" : "[]",
+              "groups" : "[]",
+              "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "requestorId",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"REQUESTOR_ID\"",
+              "length" : "60",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "amount",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"AMOUNT\"",
+              "length" : "255",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          },
+          "javax.validation.constraints.PositiveOrZero" : {
+            "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+            "simpleName" : "PositiveOrZero",
+            "packageName" : "javax.validation.constraints",
+            "memberValue" : {
+              "payload" : "[]",
+              "groups" : "[]",
+              "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.Long",
+        "variant" : "class",
+        "simpleName" : "Long",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.Long"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "baid",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"BAID\"",
+              "length" : "60",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          },
+          "javax.validation.constraints.PositiveOrZero" : {
+            "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+            "simpleName" : "PositiveOrZero",
+            "packageName" : "javax.validation.constraints",
+            "memberValue" : {
+              "payload" : "[]",
+              "groups" : "[]",
+              "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.Integer",
+        "variant" : "class",
+        "simpleName" : "Integer",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.Integer"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "transactionId",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"TRANSACTION_ID\"",
+              "length" : "32",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "msisdn",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"MSISDN\"",
+              "length" : "11",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "orderId",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"ORDER_ID\"",
+              "length" : "60",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "operatorId",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"OPERATOR_ID\"",
+              "length" : "50",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "channelCode",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "false",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"CHANNEL_CODE\"",
+              "length" : "25",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          },
+          "javax.validation.constraints.NotBlank" : {
+            "qualifiedName" : "javax.validation.constraints.NotBlank",
+            "simpleName" : "NotBlank",
+            "packageName" : "javax.validation.constraints",
+            "memberValue" : {
+              "payload" : "[]",
+              "groups" : "[]",
+              "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "creationDate",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"CREATION_DATE\"",
+              "length" : "7",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.time.LocalDateTime",
+        "variant" : "class",
+        "simpleName" : "LocalDateTime",
+        "packageName" : "java.time",
+        "canonicalName" : "java.time.LocalDateTime"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "lastUpdateDate",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"LAST_UPDATE_DATE\"",
+              "length" : "7",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.time.LocalDateTime",
+        "variant" : "class",
+        "simpleName" : "LocalDateTime",
+        "packageName" : "java.time",
+        "canonicalName" : "java.time.LocalDateTime"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "errorCode",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"ERROR_CODE\"",
+              "length" : "10",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "errorMessage",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"ERROR_MESSAGE\"",
+              "length" : "255",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "errorDetail",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.Column" : {
+            "qualifiedName" : "javax.persistence.Column",
+            "simpleName" : "Column",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "nullable" : "true",
+              "precision" : "0",
+              "unique" : "false",
+              "name" : "\"ERROR_DETAIL\"",
+              "length" : "255",
+              "updatable" : "true",
+              "scale" : "0",
+              "columnDefinition" : "\"\"",
+              "table" : "\"\"",
+              "insertable" : "true"
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.lang.String",
+        "variant" : "class",
+        "simpleName" : "String",
+        "packageName" : "java.lang",
+        "canonicalName" : "java.lang.String"
+      }
+    }, {
+      "modifiers" : 2,
+      "name" : "credentials",
+      "annotations" : {
+        "annotations" : {
+          "javax.persistence.OneToMany" : {
+            "qualifiedName" : "javax.persistence.OneToMany",
+            "simpleName" : "OneToMany",
+            "packageName" : "javax.persistence",
+            "memberValue" : {
+              "targetEntity" : "\"void\"",
+              "cascade" : "[\"ALL\"]",
+              "fetch" : "\"LAZY\"",
+              "orphanRemoval" : "true",
+              "mappedBy" : "\"\""
+            }
+          }
+        }
+      },
+      "type" : {
+        "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+        "variant" : "parameterized",
+        "typeParameters" : [ {
+          "signature" : "com.byoskill.tools.example.Credentials",
+          "variant" : "class",
+          "simpleName" : "Credentials",
+          "packageName" : "com.byoskill.tools.example",
+          "canonicalName" : "com.byoskill.tools.example.Credentials"
+        } ],
+        "rawtype" : {
+          "signature" : "!!cannot be parsed!!",
+          "variant" : "unparseable"
+        }
+      }
+    } ],
+    "annotations" : {
+      "annotations" : { }
+    },
+    "packageName" : "com.byoskill.tools.example"
+  } ],
+  "dtoMappings" : [ {
+    "entityType" : {
+      "simpleName" : "Payment",
+      "canonicalName" : "com.byoskill.tools.example.Payment",
+      "modifiers" : 1,
+      "name" : "com.byoskill.tools.example.Payment",
+      "fields" : [ {
+        "modifiers" : 2,
+        "name" : "id",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Id" : {
+              "qualifiedName" : "javax.persistence.Id",
+              "simpleName" : "Id",
+              "packageName" : "javax.persistence",
+              "memberValue" : { }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "18",
+                "unique" : "true",
+                "name" : "\"PAYMENT_ID\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "long",
+          "variant" : "class",
+          "simpleName" : "long",
+          "packageName" : "java.lang",
+          "canonicalName" : "long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "uuid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "36",
+                "unique" : "true",
+                "name" : "\"PAYMENT_UUID\"",
+                "length" : "255",
+                "updatable" : "false",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "applicationCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"APPLICATION_CODE\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "requestorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"REQUESTOR_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "amount",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"AMOUNT\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Long",
+          "variant" : "class",
+          "simpleName" : "Long",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "baid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"BAID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Integer",
+          "variant" : "class",
+          "simpleName" : "Integer",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Integer"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "transactionId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"TRANSACTION_ID\"",
+                "length" : "32",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "msisdn",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"MSISDN\"",
+                "length" : "11",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "orderId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ORDER_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "operatorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"OPERATOR_ID\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "channelCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CHANNEL_CODE\"",
+                "length" : "25",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "creationDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CREATION_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "lastUpdateDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"LAST_UPDATE_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_CODE\"",
+                "length" : "10",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorMessage",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_MESSAGE\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorDetail",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_DETAIL\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "credentials",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.OneToMany" : {
+              "qualifiedName" : "javax.persistence.OneToMany",
+              "simpleName" : "OneToMany",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "targetEntity" : "\"void\"",
+                "cascade" : "[\"ALL\"]",
+                "fetch" : "\"LAZY\"",
+                "orphanRemoval" : "true",
+                "mappedBy" : "\"\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+          "variant" : "parameterized",
+          "typeParameters" : [ {
+            "signature" : "com.byoskill.tools.example.Credentials",
+            "variant" : "class",
+            "simpleName" : "Credentials",
+            "packageName" : "com.byoskill.tools.example",
+            "canonicalName" : "com.byoskill.tools.example.Credentials"
+          } ],
+          "rawtype" : {
+            "signature" : "!!cannot be parsed!!",
+            "variant" : "unparseable"
+          }
+        }
+      } ],
+      "annotations" : {
+        "annotations" : { }
+      },
+      "packageName" : "com.byoskill.tools.example"
+    },
+    "dtoType" : null,
+    "dtoLightType" : {
+      "originalEntity" : {
+        "simpleName" : "Payment",
+        "canonicalName" : "com.byoskill.tools.example.Payment",
+        "modifiers" : 1,
+        "name" : "com.byoskill.tools.example.Payment",
+        "fields" : [ {
+          "modifiers" : 2,
+          "name" : "id",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.GeneratedValue" : {
+                "qualifiedName" : "javax.persistence.GeneratedValue",
+                "simpleName" : "GeneratedValue",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "generator" : "\"\"",
+                  "strategy" : "\"AUTO\""
+                }
+              },
+              "javax.persistence.Id" : {
+                "qualifiedName" : "javax.persistence.Id",
+                "simpleName" : "Id",
+                "packageName" : "javax.persistence",
+                "memberValue" : { }
+              },
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "18",
+                  "unique" : "true",
+                  "name" : "\"PAYMENT_ID\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "long",
+            "variant" : "class",
+            "simpleName" : "long",
+            "packageName" : "java.lang",
+            "canonicalName" : "long"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "uuid",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.GeneratedValue" : {
+                "qualifiedName" : "javax.persistence.GeneratedValue",
+                "simpleName" : "GeneratedValue",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "generator" : "\"\"",
+                  "strategy" : "\"AUTO\""
+                }
+              },
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "36",
+                  "unique" : "true",
+                  "name" : "\"PAYMENT_UUID\"",
+                  "length" : "255",
+                  "updatable" : "false",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "applicationCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"APPLICATION_CODE\"",
+                  "length" : "50",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.NotBlank" : {
+                "qualifiedName" : "javax.validation.constraints.NotBlank",
+                "simpleName" : "NotBlank",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "requestorId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"REQUESTOR_ID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "amount",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"AMOUNT\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.PositiveOrZero" : {
+                "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+                "simpleName" : "PositiveOrZero",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.Long",
+            "variant" : "class",
+            "simpleName" : "Long",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.Long"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "baid",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"BAID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.PositiveOrZero" : {
+                "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+                "simpleName" : "PositiveOrZero",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.Integer",
+            "variant" : "class",
+            "simpleName" : "Integer",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.Integer"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "transactionId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"TRANSACTION_ID\"",
+                  "length" : "32",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "msisdn",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"MSISDN\"",
+                  "length" : "11",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "orderId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ORDER_ID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "operatorId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"OPERATOR_ID\"",
+                  "length" : "50",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "channelCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"CHANNEL_CODE\"",
+                  "length" : "25",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.NotBlank" : {
+                "qualifiedName" : "javax.validation.constraints.NotBlank",
+                "simpleName" : "NotBlank",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "creationDate",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"CREATION_DATE\"",
+                  "length" : "7",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.time.LocalDateTime",
+            "variant" : "class",
+            "simpleName" : "LocalDateTime",
+            "packageName" : "java.time",
+            "canonicalName" : "java.time.LocalDateTime"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "lastUpdateDate",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"LAST_UPDATE_DATE\"",
+                  "length" : "7",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.time.LocalDateTime",
+            "variant" : "class",
+            "simpleName" : "LocalDateTime",
+            "packageName" : "java.time",
+            "canonicalName" : "java.time.LocalDateTime"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_CODE\"",
+                  "length" : "10",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorMessage",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_MESSAGE\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorDetail",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_DETAIL\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "credentials",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.OneToMany" : {
+                "qualifiedName" : "javax.persistence.OneToMany",
+                "simpleName" : "OneToMany",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "targetEntity" : "\"void\"",
+                  "cascade" : "[\"ALL\"]",
+                  "fetch" : "\"LAZY\"",
+                  "orphanRemoval" : "true",
+                  "mappedBy" : "\"\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+            "variant" : "parameterized",
+            "typeParameters" : [ {
+              "signature" : "com.byoskill.tools.example.Credentials",
+              "variant" : "class",
+              "simpleName" : "Credentials",
+              "packageName" : "com.byoskill.tools.example",
+              "canonicalName" : "com.byoskill.tools.example.Credentials"
+            } ],
+            "rawtype" : {
+              "signature" : "!!cannot be parsed!!",
+              "variant" : "unparseable"
+            }
+          }
+        } ],
+        "annotations" : {
+          "annotations" : { }
+        },
+        "packageName" : "com.byoskill.tools.example"
+      },
+      "dto" : {
+        "simpleName" : "PaymentLightDto",
+        "canonicalName" : "ch.demo.generation.model.PaymentLightDto",
+        "modifiers" : 1,
+        "name" : "PaymentLightDto",
+        "fields" : [ {
+          "modifiers" : 2,
+          "name" : "id",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.GeneratedValue" : {
+                "qualifiedName" : "javax.persistence.GeneratedValue",
+                "simpleName" : "GeneratedValue",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "generator" : "\"\"",
+                  "strategy" : "\"AUTO\""
+                }
+              },
+              "javax.persistence.Id" : {
+                "qualifiedName" : "javax.persistence.Id",
+                "simpleName" : "Id",
+                "packageName" : "javax.persistence",
+                "memberValue" : { }
+              },
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "18",
+                  "unique" : "true",
+                  "name" : "\"PAYMENT_ID\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "long",
+            "variant" : "class",
+            "simpleName" : "long",
+            "packageName" : "java.lang",
+            "canonicalName" : "long"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "uuid",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.GeneratedValue" : {
+                "qualifiedName" : "javax.persistence.GeneratedValue",
+                "simpleName" : "GeneratedValue",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "generator" : "\"\"",
+                  "strategy" : "\"AUTO\""
+                }
+              },
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "36",
+                  "unique" : "true",
+                  "name" : "\"PAYMENT_UUID\"",
+                  "length" : "255",
+                  "updatable" : "false",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "applicationCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"APPLICATION_CODE\"",
+                  "length" : "50",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.NotBlank" : {
+                "qualifiedName" : "javax.validation.constraints.NotBlank",
+                "simpleName" : "NotBlank",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "requestorId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"REQUESTOR_ID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "amount",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"AMOUNT\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.PositiveOrZero" : {
+                "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+                "simpleName" : "PositiveOrZero",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.Long",
+            "variant" : "class",
+            "simpleName" : "Long",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.Long"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "baid",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"BAID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.PositiveOrZero" : {
+                "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+                "simpleName" : "PositiveOrZero",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.Integer",
+            "variant" : "class",
+            "simpleName" : "Integer",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.Integer"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "transactionId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"TRANSACTION_ID\"",
+                  "length" : "32",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "msisdn",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"MSISDN\"",
+                  "length" : "11",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "orderId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ORDER_ID\"",
+                  "length" : "60",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "operatorId",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"OPERATOR_ID\"",
+                  "length" : "50",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "channelCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "false",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"CHANNEL_CODE\"",
+                  "length" : "25",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              },
+              "javax.validation.constraints.NotBlank" : {
+                "qualifiedName" : "javax.validation.constraints.NotBlank",
+                "simpleName" : "NotBlank",
+                "packageName" : "javax.validation.constraints",
+                "memberValue" : {
+                  "payload" : "[]",
+                  "groups" : "[]",
+                  "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "creationDate",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"CREATION_DATE\"",
+                  "length" : "7",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.time.LocalDateTime",
+            "variant" : "class",
+            "simpleName" : "LocalDateTime",
+            "packageName" : "java.time",
+            "canonicalName" : "java.time.LocalDateTime"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "lastUpdateDate",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"LAST_UPDATE_DATE\"",
+                  "length" : "7",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.time.LocalDateTime",
+            "variant" : "class",
+            "simpleName" : "LocalDateTime",
+            "packageName" : "java.time",
+            "canonicalName" : "java.time.LocalDateTime"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorCode",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_CODE\"",
+                  "length" : "10",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorMessage",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_MESSAGE\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        }, {
+          "modifiers" : 2,
+          "name" : "errorDetail",
+          "annotations" : {
+            "annotations" : {
+              "javax.persistence.Column" : {
+                "qualifiedName" : "javax.persistence.Column",
+                "simpleName" : "Column",
+                "packageName" : "javax.persistence",
+                "memberValue" : {
+                  "nullable" : "true",
+                  "precision" : "0",
+                  "unique" : "false",
+                  "name" : "\"ERROR_DETAIL\"",
+                  "length" : "255",
+                  "updatable" : "true",
+                  "scale" : "0",
+                  "columnDefinition" : "\"\"",
+                  "table" : "\"\"",
+                  "insertable" : "true"
+                }
+              }
+            }
+          },
+          "type" : {
+            "signature" : "java.lang.String",
+            "variant" : "class",
+            "simpleName" : "String",
+            "packageName" : "java.lang",
+            "canonicalName" : "java.lang.String"
+          }
+        } ],
+        "annotations" : {
+          "annotations" : { }
+        },
+        "packageName" : "ch.demo.generation.model"
+      }
+    }
+  } ],
+  "dtos" : [ {
+    "originalEntity" : {
+      "simpleName" : "Payment",
+      "canonicalName" : "com.byoskill.tools.example.Payment",
+      "modifiers" : 1,
+      "name" : "com.byoskill.tools.example.Payment",
+      "fields" : [ {
+        "modifiers" : 2,
+        "name" : "id",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Id" : {
+              "qualifiedName" : "javax.persistence.Id",
+              "simpleName" : "Id",
+              "packageName" : "javax.persistence",
+              "memberValue" : { }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "18",
+                "unique" : "true",
+                "name" : "\"PAYMENT_ID\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "long",
+          "variant" : "class",
+          "simpleName" : "long",
+          "packageName" : "java.lang",
+          "canonicalName" : "long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "uuid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "36",
+                "unique" : "true",
+                "name" : "\"PAYMENT_UUID\"",
+                "length" : "255",
+                "updatable" : "false",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "applicationCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"APPLICATION_CODE\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "requestorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"REQUESTOR_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "amount",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"AMOUNT\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Long",
+          "variant" : "class",
+          "simpleName" : "Long",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "baid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"BAID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Integer",
+          "variant" : "class",
+          "simpleName" : "Integer",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Integer"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "transactionId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"TRANSACTION_ID\"",
+                "length" : "32",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "msisdn",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"MSISDN\"",
+                "length" : "11",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "orderId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ORDER_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "operatorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"OPERATOR_ID\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "channelCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CHANNEL_CODE\"",
+                "length" : "25",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "creationDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CREATION_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "lastUpdateDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"LAST_UPDATE_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_CODE\"",
+                "length" : "10",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorMessage",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_MESSAGE\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorDetail",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_DETAIL\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "credentials",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.OneToMany" : {
+              "qualifiedName" : "javax.persistence.OneToMany",
+              "simpleName" : "OneToMany",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "targetEntity" : "\"void\"",
+                "cascade" : "[\"ALL\"]",
+                "fetch" : "\"LAZY\"",
+                "orphanRemoval" : "true",
+                "mappedBy" : "\"\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+          "variant" : "parameterized",
+          "typeParameters" : [ {
+            "signature" : "com.byoskill.tools.example.Credentials",
+            "variant" : "class",
+            "simpleName" : "Credentials",
+            "packageName" : "com.byoskill.tools.example",
+            "canonicalName" : "com.byoskill.tools.example.Credentials"
+          } ],
+          "rawtype" : {
+            "signature" : "!!cannot be parsed!!",
+            "variant" : "unparseable"
+          }
+        }
+      } ],
+      "annotations" : {
+        "annotations" : { }
+      },
+      "packageName" : "com.byoskill.tools.example"
+    },
+    "dto" : {
+      "simpleName" : "PaymentLightDto",
+      "canonicalName" : "ch.demo.generation.model.PaymentLightDto",
+      "modifiers" : 1,
+      "name" : "PaymentLightDto",
+      "fields" : [ {
+        "modifiers" : 2,
+        "name" : "id",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Id" : {
+              "qualifiedName" : "javax.persistence.Id",
+              "simpleName" : "Id",
+              "packageName" : "javax.persistence",
+              "memberValue" : { }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "18",
+                "unique" : "true",
+                "name" : "\"PAYMENT_ID\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "long",
+          "variant" : "class",
+          "simpleName" : "long",
+          "packageName" : "java.lang",
+          "canonicalName" : "long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "uuid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "36",
+                "unique" : "true",
+                "name" : "\"PAYMENT_UUID\"",
+                "length" : "255",
+                "updatable" : "false",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "applicationCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"APPLICATION_CODE\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "requestorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"REQUESTOR_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "amount",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"AMOUNT\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Long",
+          "variant" : "class",
+          "simpleName" : "Long",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "baid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"BAID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Integer",
+          "variant" : "class",
+          "simpleName" : "Integer",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Integer"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "transactionId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"TRANSACTION_ID\"",
+                "length" : "32",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "msisdn",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"MSISDN\"",
+                "length" : "11",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "orderId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ORDER_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "operatorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"OPERATOR_ID\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "channelCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CHANNEL_CODE\"",
+                "length" : "25",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "creationDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CREATION_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "lastUpdateDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"LAST_UPDATE_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_CODE\"",
+                "length" : "10",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorMessage",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_MESSAGE\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorDetail",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_DETAIL\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      } ],
+      "annotations" : {
+        "annotations" : { }
+      },
+      "packageName" : "ch.demo.generation.model"
+    }
+  }, {
+    "originalEntity" : {
+      "simpleName" : "Payment",
+      "canonicalName" : "com.byoskill.tools.example.Payment",
+      "modifiers" : 1,
+      "name" : "com.byoskill.tools.example.Payment",
+      "fields" : [ {
+        "modifiers" : 2,
+        "name" : "id",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Id" : {
+              "qualifiedName" : "javax.persistence.Id",
+              "simpleName" : "Id",
+              "packageName" : "javax.persistence",
+              "memberValue" : { }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "18",
+                "unique" : "true",
+                "name" : "\"PAYMENT_ID\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "long",
+          "variant" : "class",
+          "simpleName" : "long",
+          "packageName" : "java.lang",
+          "canonicalName" : "long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "uuid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.GeneratedValue" : {
+              "qualifiedName" : "javax.persistence.GeneratedValue",
+              "simpleName" : "GeneratedValue",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "generator" : "\"\"",
+                "strategy" : "\"AUTO\""
+              }
+            },
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "36",
+                "unique" : "true",
+                "name" : "\"PAYMENT_UUID\"",
+                "length" : "255",
+                "updatable" : "false",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "applicationCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"APPLICATION_CODE\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "requestorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"REQUESTOR_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "amount",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"AMOUNT\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Long",
+          "variant" : "class",
+          "simpleName" : "Long",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Long"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "baid",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"BAID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.PositiveOrZero" : {
+              "qualifiedName" : "javax.validation.constraints.PositiveOrZero",
+              "simpleName" : "PositiveOrZero",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.PositiveOrZero.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.Integer",
+          "variant" : "class",
+          "simpleName" : "Integer",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.Integer"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "transactionId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"TRANSACTION_ID\"",
+                "length" : "32",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "msisdn",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"MSISDN\"",
+                "length" : "11",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "orderId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ORDER_ID\"",
+                "length" : "60",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "operatorId",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"OPERATOR_ID\"",
+                "length" : "50",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "channelCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "false",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CHANNEL_CODE\"",
+                "length" : "25",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            },
+            "javax.validation.constraints.NotBlank" : {
+              "qualifiedName" : "javax.validation.constraints.NotBlank",
+              "simpleName" : "NotBlank",
+              "packageName" : "javax.validation.constraints",
+              "memberValue" : {
+                "payload" : "[]",
+                "groups" : "[]",
+                "message" : "\"{javax.validation.constraints.NotBlank.message}\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "creationDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"CREATION_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "lastUpdateDate",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"LAST_UPDATE_DATE\"",
+                "length" : "7",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.time.LocalDateTime",
+          "variant" : "class",
+          "simpleName" : "LocalDateTime",
+          "packageName" : "java.time",
+          "canonicalName" : "java.time.LocalDateTime"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorCode",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_CODE\"",
+                "length" : "10",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorMessage",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_MESSAGE\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "errorDetail",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.Column" : {
+              "qualifiedName" : "javax.persistence.Column",
+              "simpleName" : "Column",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "nullable" : "true",
+                "precision" : "0",
+                "unique" : "false",
+                "name" : "\"ERROR_DETAIL\"",
+                "length" : "255",
+                "updatable" : "true",
+                "scale" : "0",
+                "columnDefinition" : "\"\"",
+                "table" : "\"\"",
+                "insertable" : "true"
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.lang.String",
+          "variant" : "class",
+          "simpleName" : "String",
+          "packageName" : "java.lang",
+          "canonicalName" : "java.lang.String"
+        }
+      }, {
+        "modifiers" : 2,
+        "name" : "credentials",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.OneToMany" : {
+              "qualifiedName" : "javax.persistence.OneToMany",
+              "simpleName" : "OneToMany",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "targetEntity" : "\"void\"",
+                "cascade" : "[\"ALL\"]",
+                "fetch" : "\"LAZY\"",
+                "orphanRemoval" : "true",
+                "mappedBy" : "\"\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+          "variant" : "parameterized",
+          "typeParameters" : [ {
+            "signature" : "com.byoskill.tools.example.Credentials",
+            "variant" : "class",
+            "simpleName" : "Credentials",
+            "packageName" : "com.byoskill.tools.example",
+            "canonicalName" : "com.byoskill.tools.example.Credentials"
+          } ],
+          "rawtype" : {
+            "signature" : "!!cannot be parsed!!",
+            "variant" : "unparseable"
+          }
+        }
+      } ],
+      "annotations" : {
+        "annotations" : { }
+      },
+      "packageName" : "com.byoskill.tools.example"
+    },
+    "dto" : {
+      "simpleName" : "PaymentDto",
+      "canonicalName" : "ch.demo.generation.model.PaymentDto",
+      "modifiers" : 1,
+      "name" : "PaymentDto",
+      "fields" : [ {
+        "modifiers" : 2,
+        "name" : "credentials",
+        "annotations" : {
+          "annotations" : {
+            "javax.persistence.OneToMany" : {
+              "qualifiedName" : "javax.persistence.OneToMany",
+              "simpleName" : "OneToMany",
+              "packageName" : "javax.persistence",
+              "memberValue" : {
+                "targetEntity" : "\"void\"",
+                "cascade" : "[\"ALL\"]",
+                "fetch" : "\"LAZY\"",
+                "orphanRemoval" : "true",
+                "mappedBy" : "\"\""
+              }
+            }
+          }
+        },
+        "type" : {
+          "signature" : "java.util.List<com.byoskill.tools.example.Credentials>",
+          "variant" : "parameterized",
+          "typeParameters" : [ {
+            "signature" : "com.byoskill.tools.example.Credentials",
+            "variant" : "class",
+            "simpleName" : "Credentials",
+            "packageName" : "com.byoskill.tools.example",
+            "canonicalName" : "com.byoskill.tools.example.Credentials"
+          } ],
+          "rawtype" : {
+            "signature" : "!!cannot be parsed!!",
+            "variant" : "unparseable"
+          }
+        }
+      } ],
+      "annotations" : {
+        "annotations" : { }
+      },
+      "packageName" : "ch.demo.generation.model"
+    }
+  } ]
+}

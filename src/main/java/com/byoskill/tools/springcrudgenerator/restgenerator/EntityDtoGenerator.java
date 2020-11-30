@@ -5,10 +5,11 @@
 
 package com.byoskill.tools.springcrudgenerator.restgenerator;
 
-import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.EntityScanner;
-import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.EntityInformation;
+import com.byoskill.tools.springcrudgenerator.rapid.catalog.Catalog;
+import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.ClassScanner;
+import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.AnnotationInformations;
+import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.ClassInformation;
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.FieldInformation;
-import com.byoskill.tools.springcrudgenerator.rapid.templategenerator.JavaFileGenerator;
 import com.byoskill.tools.springcrudgenerator.restgenerator.templates.DtoInformation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squareup.javapoet.ClassName;
@@ -18,8 +19,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -33,22 +34,23 @@ public class EntityDtoGenerator implements GeneratorConstants {
     private final       EntityDtoGeneratorOptions options;
     private final       Set<String>               generatedTypes                    = new HashSet<>();
     private final       List<DtoMapping>          generatedDtoTypes                 = new ArrayList<>();
+    private final       Catalog                   catalog;
 
-    public EntityDtoGenerator(final EntityDtoGeneratorOptions options) {
+    public EntityDtoGenerator(final EntityDtoGeneratorOptions options, final Catalog catalog) {
 
         this.options = options;
+        this.catalog = catalog;
     }
 
     public List<DtoMapping> getGeneratedDtoTypes() {
         return generatedDtoTypes;
     }
 
-    public void generate() throws Exception {
-        log.info("Generation of the DTO for the entity {}", options.getEntityClassName());
+    public void generate(final Class<?> paymentClass) throws Exception {
+        log.info("Generation of the DTO for the entity {}", paymentClass);
         // Generate the light "dto"
         // Generate the DTO with relationships
-        final Class<?> entityClassName = options.getEntityClassName();
-        generateDtos(entityClassName);
+        generateDtos(paymentClass);
 
     }
 
@@ -56,98 +58,81 @@ public class EntityDtoGenerator implements GeneratorConstants {
         if (generatedTypes.contains(entityClassName.getCanonicalName())) return;
         generatedTypes.add(entityClassName.getCanonicalName());
 
-        final EntityScanner     entityScanner     = EntityScanner.createEntityScanner(options.getEntityClassName());
-        final EntityInformation entityInformation = entityScanner.scan();
+        final ClassScanner     classScanner     = ClassScanner.createClassScanner(entityClassName);
+        final ClassInformation classInformation = classScanner.scan();
+        catalog.addEntitiy(classInformation);
 
         if (log.isTraceEnabled()) {
-            log.trace(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(entityInformation));
+            log.trace(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(classInformation));
         }
 
-        final DtoMapping dtoMapping = new DtoMapping(entityInformation,
-                convertClassIntoDTOName(entityClassName),
-                convertClassIntoLightDTOName(entityClassName),
-                entityInformation.getFields());
+        final DtoMapping dtoMapping = new DtoMapping(classInformation);
         generatedDtoTypes.add(dtoMapping);
 
         generateLightDTO(dtoMapping);
         generateDtoWithRelationships(dtoMapping);
 
+        catalog.addDtoMapping(dtoMapping);
 
     }
 
     @NotNull
-    private String convertClassIntoLightDTOName(final Class<?> entityClassName) {
-        return options.getModelPackageName() + "." + entityClassName.getSimpleName() + LIGHT_DTO;
+    private String convertClassIntoLightDTOName(final String entityClassSimpleName) {
+        return entityClassSimpleName + LIGHT_DTO;
     }
 
     @NotNull
-    private String convertClassIntoDTOName(final Class<?> entityClassName) {
-        return options.getModelPackageName() + "." + entityClassName.getSimpleName() + DTO;
+    private String convertClassIntoDTOName(final String entityClassSimpleName) {
+        return entityClassSimpleName + DTO;
     }
 
     private void generateLightDTO(final DtoMapping dtoMapping) throws Exception {
 
         final DtoInformation dtoInformation = new DtoInformation();
-        dtoInformation.setEntityInformation(dtoMapping.getEntityType());
-        dtoInformation.setClassName(dtoMapping.getEntityLightDtoClassname());
-        dtoInformation.setPackageName(options.getModelPackageName());
+        dtoInformation.setOriginalEntity(dtoMapping.getEntityType());
 
-        final List<FieldInformation> lightDtoFields = addPropertiesForLightDTO(dtoInformation.getEntityInformation());
-        dtoMapping.setLightDtoFields(lightDtoFields);
+        final String dtoSimpleName = convertClassIntoLightDTOName(dtoMapping.getEntityType().getSimpleName());
+        dtoInformation.getDto().setClassName(options.getModelPackageName(), dtoSimpleName);
 
+        final List<FieldInformation> lightDtoFields = addPropertiesForLightDTO(dtoInformation.getOriginalEntity());
+        dtoInformation.setFields(lightDtoFields);
 
-        final JavaFileGenerator javaFile = new JavaFileGenerator(options.getModelPackageName(), dtoInformation.getClassName(), dtoInformation);
-        javaFile.setTemplate(DTO_GENERATOR_HANDLEBARS_TEMPLATE);
-        javaFile.writeTo(System.out);
-        javaFile.writeTo(Paths.get(options.getOutputFolder()));
+        dtoInformation.getDto().setModifiers(Modifier.PUBLIC);
+
+        dtoMapping.setDtoLightType(dtoInformation);
+
+        catalog.addDto(dtoInformation);
 
     }
 
     private void generateDtoWithRelationships(final DtoMapping dtoMapping) throws Exception {
 
-        final DtoInformation dtoInformation = new DtoInformation();
-        dtoInformation.setEntityInformation(dtoMapping.getEntityType());
-        dtoInformation.setClassName(dtoMapping.getEntityDtoClassname());
-        dtoInformation.setPackageName(options.getModelPackageName());
+        final DtoInformation   dtoInformation = new DtoInformation();
+        final ClassInformation dto            = dtoInformation.getDto();
 
-        final List<FieldInformation> lightDtoFields = addPropertiesForDTO(dtoInformation.getEntityInformation());
-        dtoMapping.setLightDtoFields(lightDtoFields);
+        dtoInformation.setOriginalEntity(dtoMapping.getEntityType());
 
+        final String dtoSimpleName = convertClassIntoDTOName(dtoMapping.getEntityType().getSimpleName());
+        dto.setClassName(options.getModelPackageName(), dtoSimpleName);
 
-        final JavaFileGenerator javaFile = new JavaFileGenerator(options.getModelPackageName(), dtoInformation.getClassName(), dtoInformation);
-        javaFile.setTemplate(DTO_GENERATOR_HANDLEBARS_TEMPLATE);
-        javaFile.writeTo(System.out);
-        javaFile.writeTo(Paths.get(options.getOutputFolder()));
-        /**
+        final List<FieldInformation> lightDtoFields = addPropertiesForDTO(dtoInformation.getOriginalEntity());
+        dtoInformation.setFields(lightDtoFields);
 
-         String entityNameDto = dtoMapping.getDtoType();
-         TypeSpec.Builder entityDto = TypeSpec.classBuilder(dtoMapping.getEntityDtoClassname())
-         .addModifiers(Modifier.PUBLIC)
-         .addMethod(MethodSpec.constructorBuilder().addModifiers(Modifier.PUBLIC).build())
-         .addJavadoc("DTO  with relationships for @{$T}", ClassName.get(entityClassName));
-         List<Field> dtoFields = addPropertiesForDTO(entityDto, entityClassName);
-         dtoMapping.setDtoFields(dtoFields);
-
-         entityDto.superclass(ClassName.bestGuess(dtoMapping.getDtoLightType()));
-
-         JavaFile javaFile = JavaFile.builder(options.getModelPackageName(), entityDto.build())
-         .build();
-         javaFile.writeTo(System.out);
-         javaFile.writeTo(Paths.get(options.getOutputFolder()));
-         */
+        dto.setModifiers(Modifier.PUBLIC);
+        catalog.addDto(dtoInformation);
 
     }
 
-    private List<FieldInformation> addPropertiesForDTO(final EntityInformation entityInformation) throws Exception {
-        final List<FieldInformation> fieldList = entityInformation.getFields().stream()
-                                                                  .filter(field -> !isTransientOrVolatileField(field))
-                                                                  .filter(field -> isAnnotatedWithJPAOrHibernate(field))
-                                                                  .filter(field -> isAnnotatedPropertyWith(field, ManyToMany.class)
-                                                                          || isAnnotatedPropertyWith(field, OneToOne.class)
-                                                                          || isAnnotatedPropertyWith(field, ManyToOne.class)
-                                                                          || isAnnotatedPropertyWith(field, OneToMany.class)
-                                                                          || isAnnotatedPropertyWith(field, EmbeddedId.class))
-                                                                  .collect(Collectors.toList());
+    private List<FieldInformation> addPropertiesForDTO(final ClassInformation classInformation) throws Exception {
+        final List<FieldInformation> fieldList = classInformation.getFields().stream()
+                                                                 .filter(field -> !isTransientOrVolatileField(field))
+                                                                 .filter(this::isAnnotatedWithJPAOrHibernate)
+                                                                 .filter(field -> isAnnotatedPropertyWith(field, ManyToMany.class)
+                                                                         || isAnnotatedPropertyWith(field, OneToOne.class)
+                                                                         || isAnnotatedPropertyWith(field, ManyToOne.class)
+                                                                         || isAnnotatedPropertyWith(field, OneToMany.class)
+                                                                         || isAnnotatedPropertyWith(field, EmbeddedId.class))
+                                                                 .collect(Collectors.toList());
         return fieldList;
     }
 
@@ -161,7 +146,8 @@ public class EntityDtoGenerator implements GeneratorConstants {
     }
 
     private boolean isAnnotatedPropertyWith(final FieldInformation field, final Class<?> entityClassName) {
-        return field.getAnnotations().isAnnotatedWith(entityClassName);
+        final AnnotationInformations annotations = field.getAnnotations();
+        return annotations.isAnnotatedWith(entityClassName);
     }
 
     /**
@@ -220,20 +206,21 @@ public class EntityDtoGenerator implements GeneratorConstants {
                            log.error("Cannot convert the type argument", targ, e);
                        }
                    })
-                   .map(targ -> convertClassIntoLightDTOName((Class) targ))
+                   .map(targ -> convertClassIntoLightDTOName(((Class) targ).getSimpleName()))
                    .map(ClassName::bestGuess)
                    .toArray(TypeName[]::new);
     }
 
 
     private boolean hasJPAOrHibernateAnnotation(final FieldInformation fieldInformation) {
-        return fieldInformation.getAnnotations().isAnnotatedWith("org.hibernate.annotations")
-                || fieldInformation.getAnnotations().isAnnotatedWith("javax.persistence");
+        final AnnotationInformations annotations = fieldInformation.getAnnotations();
+        return annotations.isAnnotatedWith("org.hibernate.annotations")
+                || annotations.isAnnotatedWith("javax.persistence");
 
     }
 
-    private List<FieldInformation> addPropertiesForLightDTO(final EntityInformation entityInformation) throws Exception {
-        final List<FieldInformation> entityInformationFields = entityInformation.getFields();
+    private List<FieldInformation> addPropertiesForLightDTO(final ClassInformation classInformation) throws Exception {
+        final List<FieldInformation> entityInformationFields = classInformation.getFields();
         return entityInformationFields.stream()
                                       .filter(field -> !isTransientOrVolatileField(field))
                                       .filter(field -> isAnnotatedWithJPAOrHibernate(field))
@@ -245,4 +232,6 @@ public class EntityDtoGenerator implements GeneratorConstants {
                                       .filter(field -> !isAnnotatedPropertyWith(field, OneToMany.class))
                                       .collect(Collectors.toList());
     }
+
+
 }

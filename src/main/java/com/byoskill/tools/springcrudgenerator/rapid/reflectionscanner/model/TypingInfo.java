@@ -14,4 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class TypingInfo implements Serializable {
     private String signature;
+    private String variant;
+
+
 }

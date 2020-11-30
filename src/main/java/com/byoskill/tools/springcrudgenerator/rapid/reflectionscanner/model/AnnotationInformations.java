@@ -25,8 +25,13 @@ public class AnnotationInformations implements Serializable {
         return isAnnotatedWith(typeName.getName());
     }
 
+    /**
+     * Matches exact qualified name or qualified name starting by the term.
+     * @param qualifiedName the qualified name of an annotation or the starting sentence.
+     * @return true if the annotation matching the condition was found.
+     */
     public boolean isAnnotatedWith(final String qualifiedName) {
-        return annotations.containsKey(qualifiedName);
+        return annotations.containsKey(qualifiedName) || annotations.keySet().stream().anyMatch(k -> k.startsWith(qualifiedName));
     }
 
     /**

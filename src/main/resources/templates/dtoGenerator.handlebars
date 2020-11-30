@@ -1,13 +1,24 @@
-package {{packageName}};
+{{#*inline "fieldPartial"}}
+    private {{javatype field.type}} {{field.name}};
+{{/inline}}
+
+package {{dto.packageName}};
 
 /**
- * Light DTO Entity without relationships for {{entity.simpleName}}
- */
-public class {{className}} {
+* Light DTO Entity without relationships for {link {{originalEntity.canonicalName}} }
+*/
+public class {{dto.simpleName}} {
+{{#each dto.fields as |field|}}
+    {{> fieldPartial field=field}}
+{{/each}}
 
- public {{className}}() {
-   super();
- }
+    /**
+     * Instantiate a new DTO.
+     */
+    public {{dto.simpleName}}() {
+    super();
+    }
+
 
 }
 

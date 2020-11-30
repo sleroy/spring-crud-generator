@@ -20,11 +20,12 @@ import java.util.List;
 @Setter
 @ToString
 public class ParameterizedTypeInfo extends TypingInfo {
-    private final List<TypingInfo> typeParameters = new ArrayList<>();
-    private       TypingInfo       rawtype;
+    public static final String           PARAMETERIZED  = "parameterized";
+    private final       List<TypingInfo> typeParameters = new ArrayList<>();
+    private             TypingInfo       rawtype;
 
     public ParameterizedTypeInfo(final String signature) {
-        super(signature);
+        super(signature, PARAMETERIZED);
     }
 
     @NotNull
