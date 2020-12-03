@@ -34,10 +34,10 @@ var dtos = catalog.dtos;
 
 // Options to generate the code
 const genOpts = {
-	modelFolder: project + 'src/main/gen/java',
-	converterFolder: project + 'src/main/gen/java',
-	serviceFolder: project + 'src/main/gen/java',
-	processorFolder: project + 'src/main/gen/java',
+	modelFolder: project + 'src/test/java',
+	converterFolder: project + 'src/test/java',
+	serviceFolder: project + 'src/test/java',
+	processorFolder: project + 'src/test/java',
 	testFolder: project + 'src/test/java',
 	dtoPackageName: 'com.byoskill.generated.example.model',
 	converterPackageName: 'com.byoskill.generated.example.converters',
@@ -50,25 +50,48 @@ const genOpts = {
  /*****************************************************************************/
 log.info(`Number of DTO to generate num=${dtos.length}`);
 
-for (var dtoInfo of dtos) {
-	var dto = dtoInfo.dto;
-	globals.usedJavaTypes.clear();
+for (var dtoMapping of catalog.dtoMappings) {
+	// Generate light dto
+	{
+		var dtoInfo = dtoMapping.dtoLightType;
+		globals.usedJavaTypes.clear();
 
-	log.info(`Generate DTO with name ${dto.canonicalName}`);
+		log.info(`Generate DTO with name ${dtoInfo.canonicalName}`);
 
-	var content = template.handlebars(`dtoGenerator.handlebars`, {
-		dto: dto,
-		originalEntity: dtoInfo.originalEntity,
-		postRender: true,
-		globals: globals
-	});
-	log.debug(`Generated content ${content}`);
+		var content = template.handlebars(`dtoLightGenerator.handlebars`, {
+			dtoPackageName: genOpts.dtoPackageName,
+			dto: dtoInfo.dto,
+			originalEntity: dtoInfo.originalEntity,
+			postRender: true,
+			globals: globals
+		});
+		log.debug(`Generated content ${content}`);
 
-	const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dto.simpleName);
+		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoInfo.dto.simpleName);
+		log.info(`Output file path${outputFilePath}`);
+		fs.writeFileSync(outputFilePath, content);
+	}
+	{
+		// Generate dto
+		var dtoInfo = dtoMapping.dtoType;
+		globals.usedJavaTypes.clear();
 
-	console.log(globals);
-	log.info(`Output file path${outputFilePath}`);
-	fs.writeFileSync(outputFilePath, content);
+		log.info(`Generate DTO with name ${dtoInfo.canonicalName}`);
+
+		var content = template.handlebars(`dtoGenerator.handlebars`, {
+			dtoPackageName: genOpts.dtoPackageName,
+			dtoLight: dtoMapping.dtoLightType.dto,
+			dto: dtoInfo.dto,
+			originalEntity: dtoInfo.originalEntity,
+			postRender: true,
+			globals: globals
+		});
+		log.debug(`Generated content ${content}`);
+
+		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoInfo.dto.simpleName);
+		log.info(`Output file path${outputFilePath}`);
+		fs.writeFileSync(outputFilePath, content);
+	}
 }
 
 /*******************************************************************************
@@ -76,11 +99,14 @@ for (var dtoInfo of dtos) {
  /*****************************************************************************/
 log.info(`Number of converts to generate num=${dtos.length}`);
 
-for (var entityInfo of catalog.entities) {
+for (var dtoMapping of catalog.dtoMappings) {
 	globals.usedJavaTypes.clear();
 
+	const entityInfo = dtoMapping.entityType;
 	const payload = {
 		entity: entityInfo,
+		dto: dtoMapping.dtoType.dto,
+		dtoLight: dtoMapping.dtoLightType.dto,
 		dtoName: genOpts.dtoPackageName + '.' + entityInfo.simpleName + 'Dto',
 		dtoLightName: genOpts.dtoPackageName + '.' + entityInfo.simpleName + 'LightDto',
 		converterName: entityInfo.simpleName + 'Converter',
@@ -93,11 +119,7 @@ for (var entityInfo of catalog.entities) {
 	var content = template.handlebars(`convertor.handlebars`, payload);
 	log.debug(`Generated content ${content}`);
 
-	const outputFilePath = computePath(
-		genOpts.converterFolder,
-		genOpts.converterPackageName,
-		payload.converterName
-	);
+	const outputFilePath = computePath(genOpts.converterFolder, genOpts.converterPackageName, payload.converterName);
 
 	console.log(globals);
 	log.info(`Output file path${outputFilePath}`);

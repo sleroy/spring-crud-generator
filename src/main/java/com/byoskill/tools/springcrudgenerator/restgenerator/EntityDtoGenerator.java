@@ -119,6 +119,9 @@ public class EntityDtoGenerator implements GeneratorConstants {
         dtoInformation.setFields(lightDtoFields);
 
         dto.setModifiers(Modifier.PUBLIC);
+
+        dtoMapping.setDtoType(dtoInformation);
+
         catalog.addDto(dtoInformation);
 
     }

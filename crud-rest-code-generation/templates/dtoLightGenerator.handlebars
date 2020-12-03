@@ -6,7 +6,7 @@ package {{dtoPackageName}};
 /**
 * Light DTO Entity without relationships for {link {{originalEntity.canonicalName}} }
 */
-public class {{dto.simpleName}} extends {{dtoLight.simpleName}} {
+public class {{dto.simpleName}} {
 {{#each dto.fields as |field|}}
     {{> fieldPartial field=field}}
 {{/each}}

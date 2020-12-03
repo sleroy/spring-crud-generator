@@ -6,8 +6,8 @@ function getBaseType(type) {
         }
 		return type.simpleName;
 	} else if (type.variant == "parameterized") {
-		var tpm = type.typeParameters.map(t => t.simpleName).join(',');		
-		return type.rawtype.simpleName + "<" + tpm + ">";
+		var tpm = type.typeParameters.map(t => getBaseType(t)).join(',');		
+		return getBaseType(type.rawtype) + "<" + tpm + ">";
 	}
 }
 

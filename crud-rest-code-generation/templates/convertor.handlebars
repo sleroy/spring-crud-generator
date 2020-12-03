@@ -2,6 +2,7 @@ package {{packageName}};
 
 
 \{{> imports}}
+import java.util.stream.Collectors;
 
 /**
 * DTO Converter for {link {{entity.canonicalName}} }
@@ -15,8 +16,117 @@ public class {{converterName}} {
         super();
     }
 
-    
+    /**
+     * Converts an entity into a lightweight DTO without relationships
+     * @return the converted DTO
+     * @param entity the entity
+     */
+     @{{type "javax.annotation.Nullable"}}
+    public {{type dtoLightName}} toLightDTO(@{{type "javax.annotation.Nullable"}} final {{type entity.canonicalName}} entity) {
+        if (entity == null) return null ;
+        {{type dtoLightName}} dto = new {{type dtoLightName}}();
 
+        this.mapEntityToDto(dto, entity);
+        return dto;
+    }
+
+
+    /**
+     * Converts an entity into a DTO with relationships
+     * @return the converted DTO
+     * @param entity the entity
+     */
+    @{{type "javax.annotation.Nullable"}}
+    public {{type dtoName}} toDTO(@{{type "javax.annotation.Nullable"}} final {{type entity.canonicalName}} entity) {
+        if (entity == null) return null;
+        {{type dtoName}} dto = new {{type dtoName}}();
+
+        this.mapEntityToDto(dto, entity);
+
+        {{#each dto.fields as |field|}}
+        dto.set{{capitalize field.name}}( entity.get{{capitalize field.name}}() );
+        {{/each}}
+        return dto;
+    }
+
+    /**
+     * Converts an entity into a DTO without relationships
+     * @param dto the dto
+     * @return the converted DTO
+     */
+     @{{type "javax.annotation.Nullable"}}
+    public {{type entity.canonicalName}} toEntity(@{{type "javax.annotation.Nullable"}} final {{type dtoLightName}} dto) {
+        if (dto == null) return null ;
+        {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
+
+        this.mapDtoToEntity(entity, dto);
+        return entity;
+    }
+
+
+    /**
+     * Converts an entity into a DTO without relationships
+     * @param dto the dto
+     * @return the converted DTO
+     */
+     @{{type "javax.annotation.Nullable"}}
+    public {{type entity.canonicalName}} toEntity(@{{type "javax.annotation.Nullable"}} final {{type dtoName}} dto) {
+        if (dto == null) return null ;
+        {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
+
+        this.mapDtoToEntity(entity, dto);
+
+        {{#each dto.fields as |field|}}
+        entity.set{{capitalize field.name}}( dto.get{{capitalize field.name}}() );
+        {{/each}}
+
+        return entity;
+    }
+
+    /**
+     * Map the basic fields of an entity (not the relationships)     
+     * @param entity the entity
+     * @param dto the dto
+     */
+    public void mapEntityToDto(@{{type "javax.validation.constraints.NotNull"}} final {{type dtoLightName}} dto, 
+                               @{{type "javax.validation.constraints.NotNull"}} final {{type entity.canonicalName}} entity) {
+        {{#each dtoLight.fields as |field|}}
+        dto.set{{capitalize field.name}}( entity.get{{capitalize field.name}}() );
+        {{/each}}
+    }
+
+    /**
+     * Map the basic fields of an entity (not the relationships)     
+     * @param entity the entity
+     * @param dto the dto
+     */
+    public void mapDtoToEntity(@{{type "javax.validation.constraints.NotNull"}} final {{type entity.canonicalName}} entity,
+                               @{{type "javax.validation.constraints.NotNull"}} final {{type dtoLightName}} dto) {
+
+        {{#each dtoLight.fields as |field|}}
+        entity.set{{capitalize field.name}}( dto.get{{capitalize field.name}}() );
+        {{/each}}
+    }
+
+        /**
+     * Converts a list of dto into entities.
+     *
+     * @param dtos the dtos
+     * @return the list of entities
+     */
+    public {{type "java.util.List"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.List"}}<? extends {{type dtoLightName}}> dtos) {
+        return dtos.stream().map(this::toEntity).collect(Collectors.toList());
+    }
+
+    /**
+     * Converts a set of dto into entities.
+     *
+     * @param dtos the dtos
+     * @return the list of entities
+     */
+    public {{type "java.util.Set"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.Set"}}<? extends {{type dtoLightName}}> dtos) {
+        return dtos.stream().map(this::toEntity).collect(Collectors.toSet());
+    }
 
 }
 
