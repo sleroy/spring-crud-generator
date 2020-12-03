@@ -132,6 +132,7 @@ public class EntityDtoGenerator implements GeneratorConstants {
                                                                          || isAnnotatedPropertyWith(field, ManyToOne.class)
                                                                          || isAnnotatedPropertyWith(field, OneToMany.class)
                                                                          || isAnnotatedPropertyWith(field, EmbeddedId.class))
+                                                                 .peek(field -> field.putAttr(GeneratorConstants.P_COMPLEX_JPA_ATTR, true))
                                                                  .collect(Collectors.toList());
         return fieldList;
     }
@@ -230,6 +231,7 @@ public class EntityDtoGenerator implements GeneratorConstants {
                                       .filter(field -> !isAnnotatedPropertyWith(field, OneToOne.class))
                                       .filter(field -> !isAnnotatedPropertyWith(field, ManyToOne.class))
                                       .filter(field -> !isAnnotatedPropertyWith(field, OneToMany.class))
+                                      .peek(field -> field.putAttr(GeneratorConstants.P_ISJPAKEY,isAnnotatedPropertyWith(field, SequenceGenerator.class) || isAnnotatedPropertyWith(field, Id.class)))
                                       .collect(Collectors.toList());
     }
 

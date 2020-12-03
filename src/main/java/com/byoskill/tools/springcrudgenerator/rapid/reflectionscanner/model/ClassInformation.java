@@ -23,6 +23,11 @@ public class ClassInformation implements Serializable {
     private List<FieldInformation> fields      = List.of();
     private AnnotationInformations annotations = new AnnotationInformations();
     private String                 packageName;
+    private boolean                primitive;
+    private boolean                array;
+    private boolean                anEnum;
+    private boolean                anInterface;
+    private boolean                annotation;
 
     public static ClassInformation from(final Class<?> entityClass) {
         final ClassInformation classInformation = new ClassInformation();
@@ -30,16 +35,30 @@ public class ClassInformation implements Serializable {
         classInformation.setCanonicalName(entityClass.getCanonicalName());
         classInformation.setModifiers(entityClass.getModifiers());
         classInformation.setName(entityClass.getName());
+        classInformation.setPrimitive(entityClass.isPrimitive());
+        classInformation.setArray(entityClass.isArray());
+        classInformation.setAnEnum(entityClass.isEnum());
+        classInformation.setAnInterface(entityClass.isInterface());
+        classInformation.setAnnotation(entityClass.isAnnotation());
+
         classInformation.setPackageName(entityClass.getPackageName());
         return classInformation;
     }
 
-  
+
     @JsonIgnore
     public void setClassName(final String packageName, final String simpleName) {
         this.simpleName = simpleName;
         name = simpleName;
         this.packageName = packageName;
         canonicalName = packageName + "." + simpleName;
+    }
+
+    public boolean getAnnotation() {
+        return annotation;
+    }
+
+    public void setAnnotation(final boolean annotation) {
+        this.annotation = annotation;
     }
 }

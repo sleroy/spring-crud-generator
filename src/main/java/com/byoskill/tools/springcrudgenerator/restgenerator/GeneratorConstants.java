@@ -10,4 +10,6 @@ public interface GeneratorConstants {
     String LIGHT_DTO = "LightDto";
     String DTO       = "Dto";
 
+    String P_ISJPAKEY         = "isJpaKey";
+    String P_COMPLEX_JPA_ATTR = "complexJpaAttr";
 }

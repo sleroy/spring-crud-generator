@@ -3,8 +3,6 @@
  * All rights reserved.
  */
 
-package com.byoskill.tools.springcrudgenerator.restgenerator;
-
 import lombok.Data;
 
 @Data

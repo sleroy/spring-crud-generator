@@ -30,12 +30,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "unique" : "true",
               "precision" : "18",
+              "unique" : "true",
               "name" : "\"PAYMENT_ID\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -48,7 +48,12 @@
         "variant" : "class",
         "simpleName" : "long",
         "packageName" : "java.lang",
-        "canonicalName" : "long"
+        "canonicalName" : "long",
+        "primitive" : true,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -70,12 +75,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "unique" : "true",
               "precision" : "36",
+              "unique" : "true",
               "name" : "\"PAYMENT_UUID\"",
               "length" : "255",
-              "updatable" : "false",
               "scale" : "0",
+              "updatable" : "false",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -88,7 +93,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -101,12 +111,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"APPLICATION_CODE\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -129,7 +139,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -142,12 +157,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"REQUESTOR_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -160,7 +175,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -173,12 +193,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"AMOUNT\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -201,7 +221,12 @@
         "variant" : "class",
         "simpleName" : "Long",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.Long"
+        "canonicalName" : "java.lang.Long",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -214,12 +239,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"BAID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -242,7 +267,12 @@
         "variant" : "class",
         "simpleName" : "Integer",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.Integer"
+        "canonicalName" : "java.lang.Integer",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -255,12 +285,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"TRANSACTION_ID\"",
               "length" : "32",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -273,7 +303,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -286,12 +321,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"MSISDN\"",
               "length" : "11",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -304,7 +339,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -317,12 +357,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"ORDER_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -335,7 +375,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -348,12 +393,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"OPERATOR_ID\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -366,7 +411,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -379,12 +429,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "false",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"CHANNEL_CODE\"",
               "length" : "25",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -407,7 +457,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -420,12 +475,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"CREATION_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -438,7 +493,12 @@
         "variant" : "class",
         "simpleName" : "LocalDateTime",
         "packageName" : "java.time",
-        "canonicalName" : "java.time.LocalDateTime"
+        "canonicalName" : "java.time.LocalDateTime",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -451,12 +511,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"LAST_UPDATE_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -469,7 +529,12 @@
         "variant" : "class",
         "simpleName" : "LocalDateTime",
         "packageName" : "java.time",
-        "canonicalName" : "java.time.LocalDateTime"
+        "canonicalName" : "java.time.LocalDateTime",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -482,12 +547,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"ERROR_CODE\"",
               "length" : "10",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -500,7 +565,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -513,12 +583,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"ERROR_MESSAGE\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -531,7 +601,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -544,12 +619,12 @@
             "packageName" : "javax.persistence",
             "memberValue" : {
               "nullable" : "true",
-              "unique" : "false",
               "precision" : "0",
+              "unique" : "false",
               "name" : "\"ERROR_DETAIL\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -562,7 +637,12 @@
         "variant" : "class",
         "simpleName" : "String",
         "packageName" : "java.lang",
-        "canonicalName" : "java.lang.String"
+        "canonicalName" : "java.lang.String",
+        "primitive" : false,
+        "annotation" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false
       }
     }, {
       "modifiers" : 2,
@@ -591,14 +671,24 @@
           "variant" : "class",
           "simpleName" : "Credentials",
           "packageName" : "com.byoskill.tools.example",
-          "canonicalName" : "com.byoskill.tools.example.Credentials"
+          "canonicalName" : "com.byoskill.tools.example.Credentials",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         } ],
         "rawtype" : {
           "signature" : "java.util.List",
           "variant" : "class",
           "simpleName" : "List",
           "packageName" : "java.util",
-          "canonicalName" : "java.util.List"
+          "canonicalName" : "java.util.List",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : true
         },
         "ownerType" : null
       }
@@ -606,7 +696,12 @@
     "annotations" : {
       "annotations" : { }
     },
-    "packageName" : "com.byoskill.tools.example"
+    "packageName" : "com.byoskill.tools.example",
+    "primitive" : false,
+    "array" : false,
+    "anEnum" : false,
+    "anInterface" : false,
+    "annotation" : false
   } ],
   "dtoMappings" : [ {
     "entityType" : {
@@ -640,12 +735,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "18",
+                "unique" : "true",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -658,7 +753,12 @@
           "variant" : "class",
           "simpleName" : "long",
           "packageName" : "java.lang",
-          "canonicalName" : "long"
+          "canonicalName" : "long",
+          "primitive" : true,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -680,12 +780,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "36",
+                "unique" : "true",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
-                "updatable" : "false",
                 "scale" : "0",
+                "updatable" : "false",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -698,7 +798,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -711,12 +816,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -739,7 +844,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -752,12 +862,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -770,7 +880,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -783,12 +898,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -811,7 +926,12 @@
           "variant" : "class",
           "simpleName" : "Long",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Long"
+          "canonicalName" : "java.lang.Long",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -824,12 +944,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"BAID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -852,7 +972,12 @@
           "variant" : "class",
           "simpleName" : "Integer",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Integer"
+          "canonicalName" : "java.lang.Integer",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -865,12 +990,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -883,7 +1008,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -896,12 +1026,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -914,7 +1044,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -927,12 +1062,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -945,7 +1080,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -958,12 +1098,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -976,7 +1116,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -989,12 +1134,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1017,7 +1162,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1030,12 +1180,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1048,7 +1198,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1061,12 +1216,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1079,7 +1234,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1092,12 +1252,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1110,7 +1270,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1123,12 +1288,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1141,7 +1306,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1154,12 +1324,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1172,7 +1342,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -1201,14 +1376,24 @@
             "variant" : "class",
             "simpleName" : "Credentials",
             "packageName" : "com.byoskill.tools.example",
-            "canonicalName" : "com.byoskill.tools.example.Credentials"
+            "canonicalName" : "com.byoskill.tools.example.Credentials",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           } ],
           "rawtype" : {
             "signature" : "java.util.List",
             "variant" : "class",
             "simpleName" : "List",
             "packageName" : "java.util",
-            "canonicalName" : "java.util.List"
+            "canonicalName" : "java.util.List",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : true
           },
           "ownerType" : null
         }
@@ -1216,7 +1401,12 @@
       "annotations" : {
         "annotations" : { }
       },
-      "packageName" : "com.byoskill.tools.example"
+      "packageName" : "com.byoskill.tools.example",
+      "primitive" : false,
+      "array" : false,
+      "anEnum" : false,
+      "anInterface" : false,
+      "annotation" : false
     },
     "dtoType" : null,
     "dtoLightType" : {
@@ -1251,12 +1441,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "true",
                   "precision" : "18",
+                  "unique" : "true",
                   "name" : "\"PAYMENT_ID\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1269,7 +1459,12 @@
             "variant" : "class",
             "simpleName" : "long",
             "packageName" : "java.lang",
-            "canonicalName" : "long"
+            "canonicalName" : "long",
+            "primitive" : true,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1291,12 +1486,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "true",
                   "precision" : "36",
+                  "unique" : "true",
                   "name" : "\"PAYMENT_UUID\"",
                   "length" : "255",
-                  "updatable" : "false",
                   "scale" : "0",
+                  "updatable" : "false",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1309,7 +1504,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1322,12 +1522,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"APPLICATION_CODE\"",
                   "length" : "50",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1350,7 +1550,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1363,12 +1568,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"REQUESTOR_ID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1381,7 +1586,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1394,12 +1604,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"AMOUNT\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1422,7 +1632,12 @@
             "variant" : "class",
             "simpleName" : "Long",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.Long"
+            "canonicalName" : "java.lang.Long",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1435,12 +1650,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"BAID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1463,7 +1678,12 @@
             "variant" : "class",
             "simpleName" : "Integer",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.Integer"
+            "canonicalName" : "java.lang.Integer",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1476,12 +1696,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"TRANSACTION_ID\"",
                   "length" : "32",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1494,7 +1714,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1507,12 +1732,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"MSISDN\"",
                   "length" : "11",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1525,7 +1750,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1538,12 +1768,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ORDER_ID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1556,7 +1786,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1569,12 +1804,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"OPERATOR_ID\"",
                   "length" : "50",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1587,7 +1822,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1600,12 +1840,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"CHANNEL_CODE\"",
                   "length" : "25",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1628,7 +1868,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1641,12 +1886,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"CREATION_DATE\"",
                   "length" : "7",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1659,7 +1904,12 @@
             "variant" : "class",
             "simpleName" : "LocalDateTime",
             "packageName" : "java.time",
-            "canonicalName" : "java.time.LocalDateTime"
+            "canonicalName" : "java.time.LocalDateTime",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1672,12 +1922,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"LAST_UPDATE_DATE\"",
                   "length" : "7",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1690,7 +1940,12 @@
             "variant" : "class",
             "simpleName" : "LocalDateTime",
             "packageName" : "java.time",
-            "canonicalName" : "java.time.LocalDateTime"
+            "canonicalName" : "java.time.LocalDateTime",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1703,12 +1958,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_CODE\"",
                   "length" : "10",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1721,7 +1976,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1734,12 +1994,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_MESSAGE\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1752,7 +2012,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1765,12 +2030,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_DETAIL\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1783,7 +2048,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1812,14 +2082,24 @@
               "variant" : "class",
               "simpleName" : "Credentials",
               "packageName" : "com.byoskill.tools.example",
-              "canonicalName" : "com.byoskill.tools.example.Credentials"
+              "canonicalName" : "com.byoskill.tools.example.Credentials",
+              "primitive" : false,
+              "annotation" : false,
+              "array" : false,
+              "anEnum" : false,
+              "anInterface" : false
             } ],
             "rawtype" : {
               "signature" : "java.util.List",
               "variant" : "class",
               "simpleName" : "List",
               "packageName" : "java.util",
-              "canonicalName" : "java.util.List"
+              "canonicalName" : "java.util.List",
+              "primitive" : false,
+              "annotation" : false,
+              "array" : false,
+              "anEnum" : false,
+              "anInterface" : true
             },
             "ownerType" : null
           }
@@ -1827,7 +2107,12 @@
         "annotations" : {
           "annotations" : { }
         },
-        "packageName" : "com.byoskill.tools.example"
+        "packageName" : "com.byoskill.tools.example",
+        "primitive" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false,
+        "annotation" : false
       },
       "dto" : {
         "simpleName" : "PaymentLightDto",
@@ -1860,12 +2145,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "true",
                   "precision" : "18",
+                  "unique" : "true",
                   "name" : "\"PAYMENT_ID\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1878,7 +2163,12 @@
             "variant" : "class",
             "simpleName" : "long",
             "packageName" : "java.lang",
-            "canonicalName" : "long"
+            "canonicalName" : "long",
+            "primitive" : true,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1900,12 +2190,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "true",
                   "precision" : "36",
+                  "unique" : "true",
                   "name" : "\"PAYMENT_UUID\"",
                   "length" : "255",
-                  "updatable" : "false",
                   "scale" : "0",
+                  "updatable" : "false",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1918,7 +2208,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1931,12 +2226,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"APPLICATION_CODE\"",
                   "length" : "50",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1959,7 +2254,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -1972,12 +2272,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"REQUESTOR_ID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -1990,7 +2290,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2003,12 +2308,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"AMOUNT\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2031,7 +2336,12 @@
             "variant" : "class",
             "simpleName" : "Long",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.Long"
+            "canonicalName" : "java.lang.Long",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2044,12 +2354,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"BAID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2072,7 +2382,12 @@
             "variant" : "class",
             "simpleName" : "Integer",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.Integer"
+            "canonicalName" : "java.lang.Integer",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2085,12 +2400,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"TRANSACTION_ID\"",
                   "length" : "32",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2103,7 +2418,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2116,12 +2436,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"MSISDN\"",
                   "length" : "11",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2134,7 +2454,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2147,12 +2472,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ORDER_ID\"",
                   "length" : "60",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2165,7 +2490,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2178,12 +2508,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"OPERATOR_ID\"",
                   "length" : "50",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2196,7 +2526,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2209,12 +2544,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "false",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"CHANNEL_CODE\"",
                   "length" : "25",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2237,7 +2572,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2250,12 +2590,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"CREATION_DATE\"",
                   "length" : "7",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2268,7 +2608,12 @@
             "variant" : "class",
             "simpleName" : "LocalDateTime",
             "packageName" : "java.time",
-            "canonicalName" : "java.time.LocalDateTime"
+            "canonicalName" : "java.time.LocalDateTime",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2281,12 +2626,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"LAST_UPDATE_DATE\"",
                   "length" : "7",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2299,7 +2644,12 @@
             "variant" : "class",
             "simpleName" : "LocalDateTime",
             "packageName" : "java.time",
-            "canonicalName" : "java.time.LocalDateTime"
+            "canonicalName" : "java.time.LocalDateTime",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2312,12 +2662,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_CODE\"",
                   "length" : "10",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2330,7 +2680,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2343,12 +2698,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_MESSAGE\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2361,7 +2716,12 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         }, {
           "modifiers" : 2,
@@ -2374,12 +2734,12 @@
                 "packageName" : "javax.persistence",
                 "memberValue" : {
                   "nullable" : "true",
-                  "unique" : "false",
                   "precision" : "0",
+                  "unique" : "false",
                   "name" : "\"ERROR_DETAIL\"",
                   "length" : "255",
-                  "updatable" : "true",
                   "scale" : "0",
+                  "updatable" : "true",
                   "columnDefinition" : "\"\"",
                   "table" : "\"\"",
                   "insertable" : "true"
@@ -2392,13 +2752,23 @@
             "variant" : "class",
             "simpleName" : "String",
             "packageName" : "java.lang",
-            "canonicalName" : "java.lang.String"
+            "canonicalName" : "java.lang.String",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           }
         } ],
         "annotations" : {
           "annotations" : { }
         },
-        "packageName" : "ch.demo.generation.model"
+        "packageName" : "ch.demo.generation.model",
+        "primitive" : false,
+        "array" : false,
+        "anEnum" : false,
+        "anInterface" : false,
+        "annotation" : false
       }
     }
   } ],
@@ -2434,12 +2804,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "18",
+                "unique" : "true",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2452,7 +2822,12 @@
           "variant" : "class",
           "simpleName" : "long",
           "packageName" : "java.lang",
-          "canonicalName" : "long"
+          "canonicalName" : "long",
+          "primitive" : true,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2474,12 +2849,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "36",
+                "unique" : "true",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
-                "updatable" : "false",
                 "scale" : "0",
+                "updatable" : "false",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2492,7 +2867,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2505,12 +2885,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2533,7 +2913,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2546,12 +2931,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2564,7 +2949,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2577,12 +2967,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2605,7 +2995,12 @@
           "variant" : "class",
           "simpleName" : "Long",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Long"
+          "canonicalName" : "java.lang.Long",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2618,12 +3013,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"BAID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2646,7 +3041,12 @@
           "variant" : "class",
           "simpleName" : "Integer",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Integer"
+          "canonicalName" : "java.lang.Integer",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2659,12 +3059,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2677,7 +3077,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2690,12 +3095,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2708,7 +3113,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2721,12 +3131,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2739,7 +3149,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2752,12 +3167,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2770,7 +3185,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2783,12 +3203,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2811,7 +3231,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2824,12 +3249,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2842,7 +3267,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2855,12 +3285,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2873,7 +3303,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2886,12 +3321,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2904,7 +3339,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2917,12 +3357,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2935,7 +3375,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2948,12 +3393,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -2966,7 +3411,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -2995,14 +3445,24 @@
             "variant" : "class",
             "simpleName" : "Credentials",
             "packageName" : "com.byoskill.tools.example",
-            "canonicalName" : "com.byoskill.tools.example.Credentials"
+            "canonicalName" : "com.byoskill.tools.example.Credentials",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           } ],
           "rawtype" : {
             "signature" : "java.util.List",
             "variant" : "class",
             "simpleName" : "List",
             "packageName" : "java.util",
-            "canonicalName" : "java.util.List"
+            "canonicalName" : "java.util.List",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : true
           },
           "ownerType" : null
         }
@@ -3010,7 +3470,12 @@
       "annotations" : {
         "annotations" : { }
       },
-      "packageName" : "com.byoskill.tools.example"
+      "packageName" : "com.byoskill.tools.example",
+      "primitive" : false,
+      "array" : false,
+      "anEnum" : false,
+      "anInterface" : false,
+      "annotation" : false
     },
     "dto" : {
       "simpleName" : "PaymentLightDto",
@@ -3043,12 +3508,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "18",
+                "unique" : "true",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3061,7 +3526,12 @@
           "variant" : "class",
           "simpleName" : "long",
           "packageName" : "java.lang",
-          "canonicalName" : "long"
+          "canonicalName" : "long",
+          "primitive" : true,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3083,12 +3553,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "36",
+                "unique" : "true",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
-                "updatable" : "false",
                 "scale" : "0",
+                "updatable" : "false",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3101,7 +3571,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3114,12 +3589,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3142,7 +3617,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3155,12 +3635,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3173,7 +3653,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3186,12 +3671,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3214,7 +3699,12 @@
           "variant" : "class",
           "simpleName" : "Long",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Long"
+          "canonicalName" : "java.lang.Long",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3227,12 +3717,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"BAID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3255,7 +3745,12 @@
           "variant" : "class",
           "simpleName" : "Integer",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Integer"
+          "canonicalName" : "java.lang.Integer",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3268,12 +3763,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3286,7 +3781,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3299,12 +3799,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3317,7 +3817,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3330,12 +3835,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3348,7 +3853,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3361,12 +3871,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3379,7 +3889,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3392,12 +3907,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3420,7 +3935,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3433,12 +3953,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3451,7 +3971,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3464,12 +3989,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3482,7 +4007,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3495,12 +4025,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3513,7 +4043,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3526,12 +4061,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3544,7 +4079,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3557,12 +4097,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3575,13 +4115,23 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       } ],
       "annotations" : {
         "annotations" : { }
       },
-      "packageName" : "ch.demo.generation.model"
+      "packageName" : "ch.demo.generation.model",
+      "primitive" : false,
+      "array" : false,
+      "anEnum" : false,
+      "anInterface" : false,
+      "annotation" : false
     }
   }, {
     "originalEntity" : {
@@ -3615,12 +4165,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "18",
+                "unique" : "true",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3633,7 +4183,12 @@
           "variant" : "class",
           "simpleName" : "long",
           "packageName" : "java.lang",
-          "canonicalName" : "long"
+          "canonicalName" : "long",
+          "primitive" : true,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3655,12 +4210,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "true",
                 "precision" : "36",
+                "unique" : "true",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
-                "updatable" : "false",
                 "scale" : "0",
+                "updatable" : "false",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3673,7 +4228,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3686,12 +4246,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3714,7 +4274,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3727,12 +4292,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3745,7 +4310,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3758,12 +4328,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3786,7 +4356,12 @@
           "variant" : "class",
           "simpleName" : "Long",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Long"
+          "canonicalName" : "java.lang.Long",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3799,12 +4374,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"BAID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3827,7 +4402,12 @@
           "variant" : "class",
           "simpleName" : "Integer",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.Integer"
+          "canonicalName" : "java.lang.Integer",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3840,12 +4420,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3858,7 +4438,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3871,12 +4456,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3889,7 +4474,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3902,12 +4492,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3920,7 +4510,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3933,12 +4528,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3951,7 +4546,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -3964,12 +4564,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "false",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -3992,7 +4592,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4005,12 +4610,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -4023,7 +4628,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4036,12 +4646,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -4054,7 +4664,12 @@
           "variant" : "class",
           "simpleName" : "LocalDateTime",
           "packageName" : "java.time",
-          "canonicalName" : "java.time.LocalDateTime"
+          "canonicalName" : "java.time.LocalDateTime",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4067,12 +4682,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -4085,7 +4700,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4098,12 +4718,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -4116,7 +4736,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4129,12 +4754,12 @@
               "packageName" : "javax.persistence",
               "memberValue" : {
                 "nullable" : "true",
-                "unique" : "false",
                 "precision" : "0",
+                "unique" : "false",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -4147,7 +4772,12 @@
           "variant" : "class",
           "simpleName" : "String",
           "packageName" : "java.lang",
-          "canonicalName" : "java.lang.String"
+          "canonicalName" : "java.lang.String",
+          "primitive" : false,
+          "annotation" : false,
+          "array" : false,
+          "anEnum" : false,
+          "anInterface" : false
         }
       }, {
         "modifiers" : 2,
@@ -4176,14 +4806,24 @@
             "variant" : "class",
             "simpleName" : "Credentials",
             "packageName" : "com.byoskill.tools.example",
-            "canonicalName" : "com.byoskill.tools.example.Credentials"
+            "canonicalName" : "com.byoskill.tools.example.Credentials",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           } ],
           "rawtype" : {
             "signature" : "java.util.List",
             "variant" : "class",
             "simpleName" : "List",
             "packageName" : "java.util",
-            "canonicalName" : "java.util.List"
+            "canonicalName" : "java.util.List",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : true
           },
           "ownerType" : null
         }
@@ -4191,7 +4831,12 @@
       "annotations" : {
         "annotations" : { }
       },
-      "packageName" : "com.byoskill.tools.example"
+      "packageName" : "com.byoskill.tools.example",
+      "primitive" : false,
+      "array" : false,
+      "anEnum" : false,
+      "anInterface" : false,
+      "annotation" : false
     },
     "dto" : {
       "simpleName" : "PaymentDto",
@@ -4225,14 +4870,24 @@
             "variant" : "class",
             "simpleName" : "Credentials",
             "packageName" : "com.byoskill.tools.example",
-            "canonicalName" : "com.byoskill.tools.example.Credentials"
+            "canonicalName" : "com.byoskill.tools.example.Credentials",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : false
           } ],
           "rawtype" : {
             "signature" : "java.util.List",
             "variant" : "class",
             "simpleName" : "List",
             "packageName" : "java.util",
-            "canonicalName" : "java.util.List"
+            "canonicalName" : "java.util.List",
+            "primitive" : false,
+            "annotation" : false,
+            "array" : false,
+            "anEnum" : false,
+            "anInterface" : true
           },
           "ownerType" : null
         }
@@ -4240,7 +4895,12 @@
       "annotations" : {
         "annotations" : { }
       },
-      "packageName" : "ch.demo.generation.model"
+      "packageName" : "ch.demo.generation.model",
+      "primitive" : false,
+      "array" : false,
+      "anEnum" : false,
+      "anInterface" : false,
+      "annotation" : false
     }
   } ]
 }

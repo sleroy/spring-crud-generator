@@ -16,7 +16,12 @@ class Template {
 
         const template = fs.readFileSync(templateFile) + '';
         const hb = Handlebars.compile(template);
-        const renderedContent = hb(payload);
+        let renderedContent = hb(payload);
+        
+        if (payload.postRender) {
+            log.warn("Post treatment is requested...");
+            renderedContent = Handlebars.compile(renderedContent)(payload);
+        }
         log.info(`Content : \n${renderedContent}`);
         return renderedContent;
     }

@@ -16,10 +16,15 @@ import lombok.ToString;
 @Getter
 @Setter
 public class ClassTypingInfo extends TypingInfo {
-    public static final String CLASS = "class";
-    private             String simpleName;
-    private             String packageName;
-    private             String canonicalName;
+    public static final String  CLASS = "class";
+    private             String  simpleName;
+    private             String  packageName;
+    private             String  canonicalName;
+    private             boolean primitive;
+    private             boolean annotation;
+    private             boolean array;
+    private boolean anEnum;
+    private boolean anInterface;
 
     public ClassTypingInfo(final String signature) {
         super(signature, CLASS);
@@ -30,6 +35,11 @@ public class ClassTypingInfo extends TypingInfo {
         classTypingInfo.simpleName = clazz.getSimpleName();
         classTypingInfo.canonicalName = clazz.getCanonicalName();
         classTypingInfo.packageName = clazz.getPackageName();
+        classTypingInfo.primitive = (clazz.isPrimitive());
+        classTypingInfo.array = (clazz.isArray());
+        classTypingInfo.anEnum = (clazz.isEnum());
+        classTypingInfo.anInterface = (clazz.isInterface());
+        classTypingInfo.annotation = clazz.isAnnotation();
         return classTypingInfo;
     }
 
