@@ -17,7 +17,6 @@
 	helpers: path.join(argv.generation, 'helpers'),
 	script: path.join(argv.generation, 'generation.js')
  */
-
 log.warn(`script:Rendering project into ${project}`);
 
 function computePath(basepath, packageName, className) {
@@ -55,6 +54,7 @@ for (var dtoMapping of catalog.dtoMappings) {
 	{
 		var dtoInfo = dtoMapping.dtoLightType;
 		globals.usedJavaTypes.clear();
+		
 
 		log.info(`Generate DTO with name ${dtoInfo.canonicalName}`);
 

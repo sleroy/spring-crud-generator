@@ -3,17 +3,24 @@ package {{packageName}};
 
 \{{> imports}}
 import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
 * DTO Converter for {link {{entity.canonicalName}} }
 */
+@Component
 public class {{converterName}} {
+
+    {{#each dto.dependencies as |dep|}} private {{javatype dep}} {{javaTypeToBeanName dep}}; {{/each}}
 
     /**
      * Instantiate a new converter.
      */
-    public {{converterName}}() {
+    @Autowired
+    public {{converterName}}(  {{#each dto.dependencies as |dep|}} final {{javatype dep}} {{javaTypeToBeanName dep}}, {{/each}}) {
         super();
+        {{#each dto.dependencies as |dep|}} this.{{javaTypeToBeanName dep}}={{javaTypeToBeanName dep}}; {{/each}}
     }
 
     /**
@@ -24,7 +31,7 @@ public class {{converterName}} {
      @{{type "javax.annotation.Nullable"}}
     public {{type dtoLightName}} toLightDTO(@{{type "javax.annotation.Nullable"}} final {{type entity.canonicalName}} entity) {
         if (entity == null) return null ;
-        {{type dtoLightName}} dto = new {{type dtoLightName}}();
+        final {{type dtoLightName}} dto = new {{type dtoLightName}}();
 
         this.mapEntityToDto(dto, entity);
         return dto;
@@ -39,11 +46,11 @@ public class {{converterName}} {
     @{{type "javax.annotation.Nullable"}}
     public {{type dtoName}} toDTO(@{{type "javax.annotation.Nullable"}} final {{type entity.canonicalName}} entity) {
         if (entity == null) return null;
-        {{type dtoName}} dto = new {{type dtoName}}();
+        final {{type dtoName}} dto = new {{type dtoName}}();
 
         this.mapEntityToDto(dto, entity);
 
-        {{#each dto.fields as |field|}}
+        {{#each dto.fields as |field|}}        
         dto.set{{capitalize field.name}}( entity.get{{capitalize field.name}}() );
         {{/each}}
         return dto;
@@ -57,7 +64,7 @@ public class {{converterName}} {
      @{{type "javax.annotation.Nullable"}}
     public {{type entity.canonicalName}} toEntity(@{{type "javax.annotation.Nullable"}} final {{type dtoLightName}} dto) {
         if (dto == null) return null ;
-        {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
+        final {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
 
         this.mapDtoToEntity(entity, dto);
         return entity;
@@ -72,7 +79,7 @@ public class {{converterName}} {
      @{{type "javax.annotation.Nullable"}}
     public {{type entity.canonicalName}} toEntity(@{{type "javax.annotation.Nullable"}} final {{type dtoName}} dto) {
         if (dto == null) return null ;
-        {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
+        final {{type entity.canonicalName}} entity = new {{type entity.canonicalName}}();
 
         this.mapDtoToEntity(entity, dto);
 

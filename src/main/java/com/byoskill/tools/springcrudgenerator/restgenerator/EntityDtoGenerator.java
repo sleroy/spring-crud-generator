@@ -7,9 +7,7 @@ package com.byoskill.tools.springcrudgenerator.restgenerator;
 
 import com.byoskill.tools.springcrudgenerator.rapid.catalog.Catalog;
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.ClassScanner;
-import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.AnnotationInformations;
-import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.ClassInformation;
-import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.FieldInformation;
+import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.*;
 import com.byoskill.tools.springcrudgenerator.restgenerator.templates.DtoInformation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squareup.javapoet.ClassName;
@@ -115,8 +113,21 @@ public class EntityDtoGenerator implements GeneratorConstants {
         final String dtoSimpleName = convertClassIntoDTOName(dtoMapping.getEntityType().getSimpleName());
         dto.setClassName(options.getModelPackageName(), dtoSimpleName);
 
-        final List<FieldInformation> lightDtoFields = addPropertiesForDTO(dtoInformation.getOriginalEntity());
-        dtoInformation.setFields(lightDtoFields);
+        final List<FieldInformation> dtoFields = addPropertiesForDTO(dtoInformation.getOriginalEntity());
+        dtoInformation.setFields(dtoFields);
+
+        // Autowired dependencies
+        final Set<TypingInfo> dependencies = new HashSet<>();
+        dtoFields.forEach(dtoField -> {
+            if (dtoField.getType() instanceof ParameterizedTypeInfo) {
+                final ParameterizedTypeInfo type = (ParameterizedTypeInfo) dtoField.getType();
+                type.getTypeParameters().forEach(dependencies::add);
+
+            } else {
+                dependencies.add(dtoField.getType());
+            }
+        });
+        dtoInformation.setDependencies(dependencies);
 
         dto.setModifiers(Modifier.PUBLIC);
 
@@ -125,6 +136,7 @@ public class EntityDtoGenerator implements GeneratorConstants {
         catalog.addDto(dtoInformation);
 
     }
+
 
     private List<FieldInformation> addPropertiesForDTO(final ClassInformation classInformation) throws Exception {
         final List<FieldInformation> fieldList = classInformation.getFields().stream()
@@ -234,7 +246,7 @@ public class EntityDtoGenerator implements GeneratorConstants {
                                       .filter(field -> !isAnnotatedPropertyWith(field, OneToOne.class))
                                       .filter(field -> !isAnnotatedPropertyWith(field, ManyToOne.class))
                                       .filter(field -> !isAnnotatedPropertyWith(field, OneToMany.class))
-                                      .peek(field -> field.putAttr(GeneratorConstants.P_ISJPAKEY,isAnnotatedPropertyWith(field, SequenceGenerator.class) || isAnnotatedPropertyWith(field, Id.class)))
+                                      .peek(field -> field.putAttr(GeneratorConstants.P_ISJPAKEY, isAnnotatedPropertyWith(field, SequenceGenerator.class) || isAnnotatedPropertyWith(field, Id.class)))
                                       .collect(Collectors.toList());
     }
 
