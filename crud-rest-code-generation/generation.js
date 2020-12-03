@@ -54,9 +54,8 @@ for (var dtoMapping of catalog.dtoMappings) {
 	{
 		var dtoInfo = dtoMapping.dtoLightType;
 		globals.usedJavaTypes.clear();
-		
 
-		log.info(`Generate DTO with name ${dtoInfo.canonicalName}`);
+		log.info(`Generate DTO with name ${dtoInfo.dto.canonicalName}`);
 
 		var content = template.handlebars(`dtoLightGenerator.handlebars`, {
 			dtoPackageName: genOpts.dtoPackageName,
@@ -76,7 +75,7 @@ for (var dtoMapping of catalog.dtoMappings) {
 		var dtoInfo = dtoMapping.dtoType;
 		globals.usedJavaTypes.clear();
 
-		log.info(`Generate DTO with name ${dtoInfo.canonicalName}`);
+		log.info(`Generate DTO with name ${dtoInfo.dto.canonicalName}`);
 
 		var content = template.handlebars(`dtoGenerator.handlebars`, {
 			dtoPackageName: genOpts.dtoPackageName,
@@ -105,6 +104,11 @@ for (var dtoMapping of catalog.dtoMappings) {
 	const entityInfo = dtoMapping.entityType;
 	const payload = {
 		entity: entityInfo,
+		dependencies: dtoMapping.dtoType.dependencies.map((dep) => {
+			dep.canonicalName += 'Converter';
+			dep.simpleName += 'Converter';
+			return dep;
+		}),
 		dto: dtoMapping.dtoType.dto,
 		dtoLight: dtoMapping.dtoLightType.dto,
 		dtoName: genOpts.dtoPackageName + '.' + entityInfo.simpleName + 'Dto',

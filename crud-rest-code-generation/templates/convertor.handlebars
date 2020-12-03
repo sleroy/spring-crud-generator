@@ -12,15 +12,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class {{converterName}} {
 
-    {{#each dto.dependencies as |dep|}} private {{javatype dep}} {{javaTypeToBeanName dep}}; {{/each}}
+    {{#each dependencies as |dep|}} private {{javatype dep}} {{javaTypeToBeanName dep}}; {{/each}}
 
     /**
      * Instantiate a new converter.
      */
     @Autowired
-    public {{converterName}}(  {{#each dto.dependencies as |dep|}} final {{javatype dep}} {{javaTypeToBeanName dep}}, {{/each}}) {
+    public {{converterName}}(  {{#each dependencies as |dep|}} final {{type dep.canonicalName}} {{javaTypeToBeanName dep}}, {{/each}}) {
         super();
-        {{#each dto.dependencies as |dep|}} this.{{javaTypeToBeanName dep}}={{javaTypeToBeanName dep}}; {{/each}}
+        {{#each dependencies as |dep|}} this.{{javaTypeToBeanName dep}}={{javaTypeToBeanName dep}}; {{/each}}
     }
 
     /**
