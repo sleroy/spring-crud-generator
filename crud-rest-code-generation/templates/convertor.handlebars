@@ -12,13 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class {{converterName}} {
 
-    {{#each dependencies as |dep|}} private {{javatype dep}} {{javaTypeToBeanName dep}}; {{/each}}
+{{#each dependencies as |dep|}} private {{javatype dep}} {{javaTypeToBeanName dep}}; {{/each}}
+
 
     /**
      * Instantiate a new converter.
      */
     @Autowired
-    public {{converterName}}(  {{#each dependencies as |dep|}} final {{type dep.canonicalName}} {{javaTypeToBeanName dep}}, {{/each}}) {
+    public {{converterName}}({{#each dependencies as |dep|}} final {{type dep.canonicalName}} {{javaTypeToBeanName dep}}{{#unless @last}},{{/unless}}{{/each}}) {
         super();
         {{#each dependencies as |dep|}} this.{{javaTypeToBeanName dep}}={{javaTypeToBeanName dep}}; {{/each}}
     }
@@ -50,7 +51,7 @@ public class {{converterName}} {
 
         this.mapEntityToDto(dto, entity);
 
-        {{#each dto.fields as |field|}}        
+        {{#each jpa.complexFields as |field|}}        
         dto.set{{capitalize field.name}}( entity.get{{capitalize field.name}}() );
         {{/each}}
         return dto;
@@ -83,8 +84,8 @@ public class {{converterName}} {
 
         this.mapDtoToEntity(entity, dto);
 
-        {{#each dto.fields as |field|}}
-        entity.set{{capitalize field.name}}( dto.get{{capitalize field.name}}() );
+        {{#each jpa.complexColumns as |field|}}
+        {{>complexFieldAssignment field=field}}
         {{/each}}
 
         return entity;
@@ -97,7 +98,7 @@ public class {{converterName}} {
      */
     public void mapEntityToDto(@{{type "javax.validation.constraints.NotNull"}} final {{type dtoLightName}} dto, 
                                @{{type "javax.validation.constraints.NotNull"}} final {{type entity.canonicalName}} entity) {
-        {{#each dtoLight.fields as |field|}}
+        {{#each jpa.simpleColumns as |field|}}
         dto.set{{capitalize field.name}}( entity.get{{capitalize field.name}}() );
         {{/each}}
     }
@@ -110,7 +111,7 @@ public class {{converterName}} {
     public void mapDtoToEntity(@{{type "javax.validation.constraints.NotNull"}} final {{type entity.canonicalName}} entity,
                                @{{type "javax.validation.constraints.NotNull"}} final {{type dtoLightName}} dto) {
 
-        {{#each dtoLight.fields as |field|}}
+        {{#each jpa.simpleColumns as |field|}}
         entity.set{{capitalize field.name}}( dto.get{{capitalize field.name}}() );
         {{/each}}
     }
@@ -121,7 +122,7 @@ public class {{converterName}} {
      * @param dtos the dtos
      * @return the list of entities
      */
-    public {{type "java.util.List"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.List"}}<? extends {{type dtoLightName}}> dtos) {
+    public {{type "java.util.List"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.List"}}<{{type dtoLightName}}> dtos) {
         return dtos.stream().map(this::toEntity).collect(Collectors.toList());
     }
 
@@ -131,7 +132,7 @@ public class {{converterName}} {
      * @param dtos the dtos
      * @return the list of entities
      */
-    public {{type "java.util.Set"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.Set"}}<? extends {{type dtoLightName}}> dtos) {
+    public {{type "java.util.Set"}}<{{type entity.canonicalName}}> toEntities(final {{type "java.util.Set"}}<{{type dtoLightName}}> dtos) {
         return dtos.stream().map(this::toEntity).collect(Collectors.toSet());
     }
 

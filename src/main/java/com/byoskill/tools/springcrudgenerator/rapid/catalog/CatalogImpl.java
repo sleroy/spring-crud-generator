@@ -6,8 +6,7 @@
 package com.byoskill.tools.springcrudgenerator.rapid.catalog;
 
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.ClassInformation;
-import com.byoskill.tools.springcrudgenerator.restgenerator.DtoMapping;
-import com.byoskill.tools.springcrudgenerator.restgenerator.templates.DtoInformation;
+import com.byoskill.tools.springcrudgenerator.restgenerator.JpaEntityInformation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,37 +14,27 @@ import java.util.List;
 import static java.util.Collections.unmodifiableList;
 
 public class CatalogImpl implements Catalog {
-    private final List<DtoInformation>   dtoInformations = new ArrayList<>();
-    private final List<ClassInformation> entities        = new ArrayList<>();
-    private final List<DtoMapping>       dtoMappings     = new ArrayList<>();
+    private final List<ClassInformation>     entities              = new ArrayList<>();
+    private final List<JpaEntityInformation> jpaEntityInformations = new ArrayList<>();
 
     @Override
-    public void addEntitiy(final ClassInformation entity) {
+    public void addClassDefinition(final ClassInformation entity) {
         entities.add(entity);
     }
 
     @Override
-    public List<DtoInformation> getDtos() {
-        return unmodifiableList(dtoInformations);
-    }
-
-    @Override
-    public List<ClassInformation> getEntities() {
+    public List<ClassInformation> getClassDefinitions() {
         return unmodifiableList(entities);
     }
 
     @Override
-    public void addDto(final DtoInformation dtoInformation) {
-        dtoInformations.add(dtoInformation);
+    public void addJpaEntity(final JpaEntityInformation jpaEntityInformation) {
+        jpaEntityInformations.add(jpaEntityInformation);
     }
 
     @Override
-    public void addDtoMapping(final DtoMapping dtoMapping) {
-        dtoMappings.add(dtoMapping);
+    public List<JpaEntityInformation> getJpaEntities() {
+        return jpaEntityInformations;
     }
 
-    @Override
-    public List<DtoMapping> getDtoMappings() {
-        return unmodifiableList(dtoMappings);
-    }
 }

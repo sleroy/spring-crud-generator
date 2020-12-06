@@ -6,22 +6,17 @@
 package com.byoskill.tools.springcrudgenerator.rapid.catalog;
 
 import com.byoskill.tools.springcrudgenerator.rapid.reflectionscanner.model.ClassInformation;
-import com.byoskill.tools.springcrudgenerator.restgenerator.DtoMapping;
-import com.byoskill.tools.springcrudgenerator.restgenerator.templates.DtoInformation;
+import com.byoskill.tools.springcrudgenerator.restgenerator.JpaEntityInformation;
 
 import java.util.List;
 
 public interface Catalog {
 
-    void addEntitiy(ClassInformation entity);
+    void addClassDefinition(ClassInformation entity);
 
-    public List<DtoInformation> getDtos();
+    List<ClassInformation> getClassDefinitions();
 
-    public List<ClassInformation> getEntities();
+    void addJpaEntity(JpaEntityInformation jpaEntityInformation);
 
-    void addDto(DtoInformation dtoInformation);
-
-    void addDtoMapping(DtoMapping dtoMapping);
-
-    List<DtoMapping> getDtoMappings();
+    List<JpaEntityInformation> getJpaEntities();
 }

@@ -44,4 +44,13 @@ public class ParameterizedTypeInfo extends TypingInfo {
         typeParameters.add(typeInfo);
 
     }
+
+    public boolean isParameterizedType() {
+        return true;
+    }
+
+    public Class<?> asClass() throws ClassNotFoundException {
+        return getRawtype().asClass();
+    }
+
 }

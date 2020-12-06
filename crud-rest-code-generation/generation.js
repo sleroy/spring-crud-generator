@@ -19,6 +19,9 @@
  */
 log.warn(`script:Rendering project into ${project}`);
 
+const LIGHT_DTO_NAME = 'LightDto';
+const DTO_NAME = 'Dto';
+
 function computePath(basepath, packageName, className) {
 	const targetDir = basepath + '/' + packageName.replace(/\./g, '/');
 	fs.mkdirSync(targetDir, {
@@ -29,7 +32,7 @@ function computePath(basepath, packageName, className) {
 
 log.info('script:Generation of the REST project');
 
-var dtos = catalog.dtos;
+var jpaEntities = catalog.jpaEntities;
 
 // Options to generate the code
 const genOpts = {
@@ -47,47 +50,69 @@ const genOpts = {
 /*******************************************************************************
  * Generation of the DTOS
  /*****************************************************************************/
-log.info(`Number of DTO to generate num=${dtos.length}`);
+log.info(`Number of DTO to generate num=${jpaEntities.length}`);
 
-for (var dtoMapping of catalog.dtoMappings) {
+for (var jpaEntity of catalog.jpaEntities) {
+	const dtoLightName = jpaEntity.entityType.simpleName + LIGHT_DTO_NAME;
+	const dtoName = jpaEntity.entityType.simpleName + DTO_NAME;
+
+
+	// Converting types as DTO types for complex relationships
+	jpaEntity.complexColumns.forEach(cc => {		
+		cc.dtoType = Object.assign({}, cc.type);
+		if (cc.entityCollection) {
+			cc.dtoType.typeParameters[0].simpleName = cc.dtoType.typeParameters[0].simpleName+ LIGHT_DTO_NAME
+			cc.dtoType.typeParameters[0].canonicalName = genOpts.dtoPackageName + "." + cc.dtoType.typeParameters[0].simpleName;
+		} else {
+			cc.dtoType.simpleName = cc.dtoType.simpleName+ LIGHT_DTO_NAME
+			cc.dtoType.canonicalName = cc.dtoType.canonicalName+ LIGHT_DTO_NAME
+		}
+	})
+
+
 	// Generate light dto
 	{
-		var dtoInfo = dtoMapping.dtoLightType;
 		globals.usedJavaTypes.clear();
 
-		log.info(`Generate DTO with name ${dtoInfo.dto.canonicalName}`);
+		log.info(`Generate DTO with name ${dtoLightName}`);
 
 		var content = template.handlebars(`dtoLightGenerator.handlebars`, {
+			dtoName: dtoLightName,
 			dtoPackageName: genOpts.dtoPackageName,
-			dto: dtoInfo.dto,
-			originalEntity: dtoInfo.originalEntity,
+			jpaEntity,
+			originalEntity: jpaEntity.entityType,
 			postRender: true,
-			globals: globals
+			fields: jpaEntity.simpleColumns,
+			globals: globals,
+			genOpts
 		});
 		log.debug(`Generated content ${content}`);
 
-		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoInfo.dto.simpleName);
+		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoLightName);
 		log.info(`Output file path${outputFilePath}`);
 		fs.writeFileSync(outputFilePath, content);
 	}
 	{
 		// Generate dto
-		var dtoInfo = dtoMapping.dtoType;
 		globals.usedJavaTypes.clear();
 
-		log.info(`Generate DTO with name ${dtoInfo.dto.canonicalName}`);
+		log.info(`Generate DTO with name ${dtoName}`);
 
 		var content = template.handlebars(`dtoGenerator.handlebars`, {
+			dtoName: dtoName,
+			dtoLightName: dtoLightName,
 			dtoPackageName: genOpts.dtoPackageName,
-			dtoLight: dtoMapping.dtoLightType.dto,
-			dto: dtoInfo.dto,
-			originalEntity: dtoInfo.originalEntity,
+			jpaEntity,
+			originalEntity: jpaEntity.entityType,
 			postRender: true,
-			globals: globals
+			simpleColumns: jpaEntity.simpleColumns,
+			fields: jpaEntity.complexColumns,
+			globals: globals,
+			genOpts
 		});
 		log.debug(`Generated content ${content}`);
 
-		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoInfo.dto.simpleName);
+		const outputFilePath = computePath(genOpts.modelFolder, genOpts.dtoPackageName, dtoName);
 		log.info(`Output file path${outputFilePath}`);
 		fs.writeFileSync(outputFilePath, content);
 	}
@@ -96,21 +121,22 @@ for (var dtoMapping of catalog.dtoMappings) {
 /*******************************************************************************
  * Generation of the converters
  /*****************************************************************************/
-log.info(`Number of converts to generate num=${dtos.length}`);
+log.info(`Number of converts to generate num=${jpaEntities.length}`);
 
-for (var dtoMapping of catalog.dtoMappings) {
+for (var jpaEntity of catalog.jpaEntities) {
 	globals.usedJavaTypes.clear();
 
-	const entityInfo = dtoMapping.entityType;
+	const entityInfo = jpaEntity.entityType;
+
 	const payload = {
 		entity: entityInfo,
-		dependencies: dtoMapping.dtoType.dependencies.map((dep) => {
-			dep.canonicalName += 'Converter';
+		dependencies: jpaEntity.dependencies.map((dep) => {
 			dep.simpleName += 'Converter';
+			dep.canonicalName = genOpts.converterPackageName + '.' + dep.simpleName;
 			return dep;
 		}),
-		dto: dtoMapping.dtoType.dto,
-		dtoLight: dtoMapping.dtoLightType.dto,
+		
+		jpa: jpaEntity,
 		dtoName: genOpts.dtoPackageName + '.' + entityInfo.simpleName + 'Dto',
 		dtoLightName: genOpts.dtoPackageName + '.' + entityInfo.simpleName + 'LightDto',
 		converterName: entityInfo.simpleName + 'Converter',

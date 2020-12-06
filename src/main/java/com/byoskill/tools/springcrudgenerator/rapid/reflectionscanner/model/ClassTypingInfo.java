@@ -23,8 +23,8 @@ public class ClassTypingInfo extends TypingInfo {
     private             boolean primitive;
     private             boolean annotation;
     private             boolean array;
-    private boolean anEnum;
-    private boolean anInterface;
+    private             boolean anEnum;
+    private             boolean anInterface;
 
     public ClassTypingInfo(final String signature) {
         super(signature, CLASS);
@@ -41,6 +41,11 @@ public class ClassTypingInfo extends TypingInfo {
         classTypingInfo.anInterface = (clazz.isInterface());
         classTypingInfo.annotation = clazz.isAnnotation();
         return classTypingInfo;
+    }
+
+
+    public Class<?> asClass() throws ClassNotFoundException {
+        return Class.forName(canonicalName);
     }
 
 }

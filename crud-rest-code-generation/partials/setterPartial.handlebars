@@ -3,7 +3,12 @@
     *
     * @param {{field.name}} the {{field.name}}
     */
+{{#if field.complexJpaAttr}}
+public void set{{capitalize field.name}}({{{javatype field.dtoType}}} {{{field.name}}} ) {
+    this.{{{field.name}}} = {{{field.name}}};
+}
+{{else}}
 public void set{{capitalize field.name}}({{{javatype field.type}}} {{{field.name}}} ) {
     this.{{{field.name}}} = {{{field.name}}};
 }
-
+{{/if}}

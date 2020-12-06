@@ -12,9 +12,13 @@ import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
-public class TypingInfo implements Serializable {
+public abstract class TypingInfo implements Serializable {
     private String signature;
     private String variant;
 
 
+    public boolean isParameterizedType() {
+        return false;
+    }
+    public abstract Class<?> asClass() throws ClassNotFoundException;
 }

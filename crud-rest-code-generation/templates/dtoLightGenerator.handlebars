@@ -6,23 +6,23 @@ package {{dtoPackageName}};
 /**
 * Light DTO Entity without relationships for {link {{originalEntity.canonicalName}} }
 */
-public class {{dto.simpleName}} {
-{{#each dto.fields as |field|}}
+public class {{dtoName}} {
+{{#each fields as |field|}}
     {{> fieldPartial field=field}}
 {{/each}}
 
     /**
      * Instantiate a new DTO.
      */
-    public {{dto.simpleName}}() {
+    public {{dtoName}}() {
         super();
     }
 
-    {{#each dto.fields as |field|}}
+    {{#each fields as |field|}}
     {{> getterPartial field=field}}
     {{/each}}
 
-    {{#each dto.fields as |field|}}
+    {{#each fields as |field|}}
     {{> setterPartial field=field}}
     {{/each}}
 

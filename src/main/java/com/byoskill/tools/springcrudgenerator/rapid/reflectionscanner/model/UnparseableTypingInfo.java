@@ -14,4 +14,9 @@ public class UnparseableTypingInfo extends TypingInfo {
     public UnparseableTypingInfo() {
         super(CANNOT_BE_PARSED, UNPARSEABLE);
     }
+
+    @Override
+    public Class<?> asClass() throws ClassNotFoundException {
+        return Object.class;
+    }
 }

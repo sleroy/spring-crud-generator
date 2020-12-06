@@ -19,9 +19,9 @@ import java.util.Map;
 public class FieldInformation implements Serializable {
     private int                    modifiers;
     private String                 name;
-    private AnnotationInformations annotations = new AnnotationInformations();
+    private AnnotationInformations annotations     = new AnnotationInformations();
     private TypingInfo             type;
-    private Map<String, Object> extraProperties = new HashMap<>();
+    private Map<String, Object>    extraProperties = new HashMap<>();
 
     public static FieldInformation from(final Field field) {
         final FieldInformation fieldInformation = new FieldInformation();
@@ -44,4 +44,28 @@ public class FieldInformation implements Serializable {
     public void putAttr(final String attrName, final Object attrValue) {
         extraProperties.put(attrName, attrValue);
     }
+
+
+    public boolean isAnnotatedPropertyWith(final Class<?> aClass) {
+        final AnnotationInformations annotations = getAnnotations();
+        return annotations.isAnnotatedWith(aClass);
+    }
+
+
+    public boolean isTransientOrVolatileField() {
+        final int modifiers = getModifiers();
+        return java.lang.reflect.Modifier.isTransient(modifiers) || java.lang.reflect.Modifier.isVolatile(modifiers);
+    }
+
+    public boolean isAnnotatedWithJPAOrHibernate() {
+        return (hasJPAOrHibernateAnnotation());
+    }
+
+    public boolean hasJPAOrHibernateAnnotation() {
+        final AnnotationInformations annotations = getAnnotations();
+        return annotations.isAnnotatedWith("org.hibernate.annotations")
+                || annotations.isAnnotatedWith("javax.persistence");
+
+    }
+
 }

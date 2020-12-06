@@ -3,6 +3,12 @@
 *
 * @returns the {{field.name}} property.
 */
+{{#if field.complexJpaAttr}}
+public {{{javatype field.dtoType}}} get{{capitalize field.name}}() {
+    return this.{{field.name}};
+}
+{{else}}
 public {{{javatype field.type}}} get{{capitalize field.name}}() {
     return this.{{field.name}};
 }
+{{/if}}
