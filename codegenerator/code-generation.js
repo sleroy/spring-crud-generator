@@ -2,18 +2,21 @@ const Handlebars = require('handlebars');
 const log = require('./logger').logger;
 const fs = require('fs');
 const path = require('path');
+const fse = require('fs-extra');
 const Template = require('./template-renderer').Template;
+var JSONL = require('json-literal')
 
 const GLOBAL_JS = 'globals.js';
 class CodeGeneration {
 	constructor(argv) {
 		this.argv = argv;
 		this.projectInformation = {
-			project: argv.generation,
-			templates: path.join(argv.generation, 'templates'),
-			partials: path.join(argv.generation, 'partials'),
-			helpers: path.join(argv.generation, 'helpers'),
-			script: path.join(argv.generation, 'generation.js')
+			project: argv.project,
+			templates: path.join(argv.project, 'templates'),
+			partials: path.join(argv.project, 'partials'),
+			helpers: path.join(argv.project, 'helpers'),
+			assets: path.join(argv.project, 'assets'),
+			script: path.join(argv.project, 'generation.js')
 		};
 	}
 
@@ -39,17 +42,18 @@ class CodeGeneration {
 		});
 	}
 
-	loadHelpers(globalsObject) {
-		const files = fs.readdirSync(this.projectInformation.helpers);
+	loadHelpers(globalsObject, contextObject) {
+        const files = fs.readdirSync(this.projectInformation.helpers);
 		//listing all files using forEach
 		files.forEach((fileName) => {
 			// Do whatever you want to do with the file
 			const absPath = path.join(this.projectInformation.helpers, fileName);
 			const partialName = path.parse(fileName).name;
 			log.info(`Registering helper ${partialName} from ${absPath}`);
-            const partialContent = this.readScript(absPath) + '';
+			const partialContent = this.readScript(absPath) + '';
             const globals = globalsObject;
-            console.log(globalsObject);
+            const context = contextObject;
+			console.log(globalsObject);
 			const helper = eval(partialContent);
 			Handlebars.registerHelper(partialName, helper);
 		});
@@ -62,28 +66,61 @@ class CodeGeneration {
 		return globals;
 	}
 
+	copyAssets(projectPath) {
+		// To copy a folder or file
+		log.info(`Copying assets from ${this.projectInformation.assets} to ${projectPath}`);
+
+		// Sync:
+		try {
+			fse.copySync(this.projectInformation.assets, projectPath);
+			log.info('Assets are copied');
+		} catch (err) {
+            log.error('Cannot copy the assets');
+            console.error(err);
+            throw err;
+		}		
+	}
+
 	generate() {
 		log.debug('Loading catalog from ', this.argv.catalog);
-		log.debug('Loading Generation project from ', this.argv.generation);
-		log.info('Project output path is  ', this.argv.project);
+		log.debug('Generation project from ', this.argv.project);
+		log.info('Project output path is  ', this.argv.output);
 
 		log.info('Compilation of the template');
 		try {
-            const globals = this.loadGlobals()();
-			// Context of the execution
-			const catalog = this.readCatalog(this.argv.catalog);
-			const generationInfo = this.projectInformation;
-			const script = this.readScript(generationInfo.script);
-			const project = this.argv.project;
-			const template = new Template(generationInfo);
-			log.info(`Provided globals are`, globals);
+			const context = {
+				// Imports
+				path: path,
+				fs: fs,
+				Handlebars,
+				log,
+				globals: this.loadGlobals()(),
+				// Context of the execution
+				catalog: this.readCatalog(this.argv.catalog),
+				generationInfo: this.projectInformation,
+				script: this.readScript(this.projectInformation.script),
+				output: this.argv.output,
+                project: this.argv.project,
+                JSONL,
+				template: new Template(this.projectInformation)
+			};
+
+			log.info(`Provided globals are`, context.globals);
 			this.loadPartials();
-			this.loadHelpers(globals);
+			this.loadHelpers(context.globals, context);
+
+			log.info('Copying assets');
+
+			this.copyAssets(context.output);
 
 			log.info('Execution of the code generation script');
-			eval(script);
+			let GenerationClass = eval(context.script);
+
+			const generationClass = new GenerationClass(context);
+			generationClass.generate();
 		} catch (e) {
-			log.error('Cannot generate the code', e);
+			log.error(`Cannot generate the code ${e}`);
+			console.log(e);
 		}
 	}
 }

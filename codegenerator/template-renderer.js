@@ -9,10 +9,10 @@ class Template {
     }
 
     handlebars(templateName, payload) {
-        log.info(`Generation using the template ${templateName}`);
+        log.debug(`Generation using the template ${templateName}`);
         
         const templateFile = path.join(this.project.templates, templateName);
-        log.info(`Location of the ${templateFile}`);
+        log.debug(`Location of the ${templateFile}`);
 
         const template = fs.readFileSync(templateFile) + '';
         const hb = Handlebars.compile(template);
