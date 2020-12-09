@@ -102,7 +102,8 @@ class CodeGeneration {
 				output: this.argv.output,
                 project: this.argv.project,
                 JSONL,
-				template: new Template(this.projectInformation)
+                template: new Template(this.projectInformation),
+                requires: (modulePath) => require(path.join(this.argv.project, modulePath))
 			};
 
 			log.info(`Provided globals are`, context.globals);

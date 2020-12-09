@@ -10,19 +10,21 @@ class Template {
 
     handlebars(templateName, payload) {
         log.debug(`Generation using the template ${templateName}`);
-        
+
         const templateFile = path.join(this.project.templates, templateName);
         log.debug(`Location of the ${templateFile}`);
 
         const template = fs.readFileSync(templateFile) + '';
         const hb = Handlebars.compile(template);
         let renderedContent = hb(payload);
-        
+
         if (payload.postRender) {
             log.warn("Post treatment is requested...");
             renderedContent = Handlebars.compile(renderedContent)(payload);
         }
-        log.info(`Content : \n${renderedContent}`);
+        if (payload && payload.debug) {
+            log.info(`Content : \n${renderedContent}`);
+        }
         return renderedContent;
     }
 }
