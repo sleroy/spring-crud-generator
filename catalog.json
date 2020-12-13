@@ -34,8 +34,8 @@
               "precision" : "18",
               "name" : "\"PAYMENT_ID\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -84,8 +84,8 @@
               "precision" : "36",
               "name" : "\"PAYMENT_UUID\"",
               "length" : "255",
-              "updatable" : "false",
               "scale" : "0",
+              "updatable" : "false",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -125,8 +125,8 @@
               "precision" : "0",
               "name" : "\"APPLICATION_CODE\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -176,8 +176,8 @@
               "precision" : "0",
               "name" : "\"REQUESTOR_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -217,8 +217,8 @@
               "precision" : "0",
               "name" : "\"AMOUNT\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -268,8 +268,8 @@
               "precision" : "0",
               "name" : "\"BAID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -319,8 +319,8 @@
               "precision" : "0",
               "name" : "\"TRANSACTION_ID\"",
               "length" : "32",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -360,8 +360,8 @@
               "precision" : "0",
               "name" : "\"MSISDN\"",
               "length" : "11",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -401,8 +401,8 @@
               "precision" : "0",
               "name" : "\"ORDER_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -442,8 +442,8 @@
               "precision" : "0",
               "name" : "\"OPERATOR_ID\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -483,8 +483,8 @@
               "precision" : "0",
               "name" : "\"CHANNEL_CODE\"",
               "length" : "25",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -534,8 +534,8 @@
               "precision" : "0",
               "name" : "\"CREATION_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -575,8 +575,8 @@
               "precision" : "0",
               "name" : "\"LAST_UPDATE_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -616,8 +616,8 @@
               "precision" : "0",
               "name" : "\"ERROR_CODE\"",
               "length" : "10",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -657,8 +657,8 @@
               "precision" : "0",
               "name" : "\"ERROR_MESSAGE\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -698,8 +698,8 @@
               "precision" : "0",
               "name" : "\"ERROR_DETAIL\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -985,8 +985,8 @@
                 "precision" : "18",
                 "name" : "\"PAYMENT_ID\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1035,8 +1035,8 @@
                 "precision" : "36",
                 "name" : "\"PAYMENT_UUID\"",
                 "length" : "255",
-                "updatable" : "false",
                 "scale" : "0",
+                "updatable" : "false",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1076,8 +1076,8 @@
                 "precision" : "0",
                 "name" : "\"APPLICATION_CODE\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1127,8 +1127,8 @@
                 "precision" : "0",
                 "name" : "\"REQUESTOR_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1168,8 +1168,8 @@
                 "precision" : "0",
                 "name" : "\"AMOUNT\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1219,8 +1219,8 @@
                 "precision" : "0",
                 "name" : "\"BAID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1270,8 +1270,8 @@
                 "precision" : "0",
                 "name" : "\"TRANSACTION_ID\"",
                 "length" : "32",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1311,8 +1311,8 @@
                 "precision" : "0",
                 "name" : "\"MSISDN\"",
                 "length" : "11",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1352,8 +1352,8 @@
                 "precision" : "0",
                 "name" : "\"ORDER_ID\"",
                 "length" : "60",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1393,8 +1393,8 @@
                 "precision" : "0",
                 "name" : "\"OPERATOR_ID\"",
                 "length" : "50",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1434,8 +1434,8 @@
                 "precision" : "0",
                 "name" : "\"CHANNEL_CODE\"",
                 "length" : "25",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1485,8 +1485,8 @@
                 "precision" : "0",
                 "name" : "\"CREATION_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1526,8 +1526,8 @@
                 "precision" : "0",
                 "name" : "\"LAST_UPDATE_DATE\"",
                 "length" : "7",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1567,8 +1567,8 @@
                 "precision" : "0",
                 "name" : "\"ERROR_CODE\"",
                 "length" : "10",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1608,8 +1608,8 @@
                 "precision" : "0",
                 "name" : "\"ERROR_MESSAGE\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1649,8 +1649,8 @@
                 "precision" : "0",
                 "name" : "\"ERROR_DETAIL\"",
                 "length" : "255",
-                "updatable" : "true",
                 "scale" : "0",
+                "updatable" : "true",
                 "columnDefinition" : "\"\"",
                 "table" : "\"\"",
                 "insertable" : "true"
@@ -1783,8 +1783,8 @@
               "precision" : "18",
               "name" : "\"PAYMENT_ID\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -1841,8 +1841,8 @@
               "precision" : "36",
               "name" : "\"PAYMENT_UUID\"",
               "length" : "255",
-              "updatable" : "false",
               "scale" : "0",
+              "updatable" : "false",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -1890,8 +1890,8 @@
               "precision" : "0",
               "name" : "\"APPLICATION_CODE\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -1949,8 +1949,8 @@
               "precision" : "0",
               "name" : "\"REQUESTOR_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -1998,8 +1998,8 @@
               "precision" : "0",
               "name" : "\"AMOUNT\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2057,8 +2057,8 @@
               "precision" : "0",
               "name" : "\"BAID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2116,8 +2116,8 @@
               "precision" : "0",
               "name" : "\"TRANSACTION_ID\"",
               "length" : "32",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2165,8 +2165,8 @@
               "precision" : "0",
               "name" : "\"MSISDN\"",
               "length" : "11",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2214,8 +2214,8 @@
               "precision" : "0",
               "name" : "\"ORDER_ID\"",
               "length" : "60",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2263,8 +2263,8 @@
               "precision" : "0",
               "name" : "\"OPERATOR_ID\"",
               "length" : "50",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2312,8 +2312,8 @@
               "precision" : "0",
               "name" : "\"CHANNEL_CODE\"",
               "length" : "25",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2371,8 +2371,8 @@
               "precision" : "0",
               "name" : "\"CREATION_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2420,8 +2420,8 @@
               "precision" : "0",
               "name" : "\"LAST_UPDATE_DATE\"",
               "length" : "7",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2469,8 +2469,8 @@
               "precision" : "0",
               "name" : "\"ERROR_CODE\"",
               "length" : "10",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2518,8 +2518,8 @@
               "precision" : "0",
               "name" : "\"ERROR_MESSAGE\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
@@ -2567,8 +2567,8 @@
               "precision" : "0",
               "name" : "\"ERROR_DETAIL\"",
               "length" : "255",
-              "updatable" : "true",
               "scale" : "0",
+              "updatable" : "true",
               "columnDefinition" : "\"\"",
               "table" : "\"\"",
               "insertable" : "true"
