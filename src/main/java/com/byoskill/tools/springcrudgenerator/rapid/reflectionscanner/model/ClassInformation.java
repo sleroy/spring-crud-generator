@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class ClassInformation implements Serializable {
     private String                 canonicalName;
     private int                    modifiers;
     private String                 name;
-    private List<FieldInformation> fields      = List.of();
+    private List<FieldInformation> fields      = new ArrayList<>();
     private AnnotationInformations annotations = new AnnotationInformations();
     private String                 packageName;
     private boolean                primitive;
@@ -41,7 +42,7 @@ public class ClassInformation implements Serializable {
         classInformation.setAnInterface(entityClass.isInterface());
         classInformation.setAnnotation(entityClass.isAnnotation());
 
-        classInformation.setPackageName(entityClass.getPackageName());
+        classInformation.setPackageName(entityClass.getPackage().getName());
         return classInformation;
     }
 

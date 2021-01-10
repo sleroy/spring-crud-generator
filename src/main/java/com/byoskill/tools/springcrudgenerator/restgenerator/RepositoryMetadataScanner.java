@@ -27,7 +27,7 @@ public class RepositoryMetadataScanner {
         primaryKeyType = Class.forName(repositoryType.getActualTypeArguments()[1].getTypeName());
 
         methods = clazz.getMethods();
-        for (final var method : methods) {
+        for (final Method method : methods) {
             System.out.println(method);
         }
 

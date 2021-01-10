@@ -34,7 +34,7 @@ public class AnnotationScanner {
 
     public AnnotationInformations scan() {
         log.debug("Converting the annotations (num={})", declaredAnnotations.length);
-        final var                annInfo = new AnnotationInformations();
+        final AnnotationInformations                annInfo = new AnnotationInformations();
         final Stream<Annotation> stream  = Arrays.stream(declaredAnnotations);
         stream.forEachOrdered(new AnnotationInformationConverter(annInfo));
 
@@ -58,7 +58,7 @@ public class AnnotationScanner {
             final Class<? extends Annotation> annotationType = ann.annotationType();
             final String                      qualifiedName  = annotationType.getCanonicalName();
             final String                      simpleName     = annotationType.getSimpleName();
-            final String                      packageName    = annotationType.getPackageName();
+            final String                      packageName    = annotationType.getPackage().getName();
 
             final AnnotationInformation declaredAnnotation = new AnnotationInformation(qualifiedName, simpleName);
             declaredAnnotation.setPackageName(packageName);
