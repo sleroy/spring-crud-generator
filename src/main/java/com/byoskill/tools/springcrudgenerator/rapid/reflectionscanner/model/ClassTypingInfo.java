@@ -34,7 +34,7 @@ public class ClassTypingInfo extends TypingInfo {
         final ClassTypingInfo classTypingInfo = new ClassTypingInfo(clazz.getCanonicalName());
         classTypingInfo.simpleName = clazz.getSimpleName();
         classTypingInfo.canonicalName = clazz.getCanonicalName();
-        classTypingInfo.packageName = clazz.getPackage().getName();
+        classTypingInfo.packageName = clazz.getPackage() != null ? clazz.getPackage().getName() : "";
         classTypingInfo.primitive = (clazz.isPrimitive());
         classTypingInfo.array = (clazz.isArray());
         classTypingInfo.anEnum = (clazz.isEnum());

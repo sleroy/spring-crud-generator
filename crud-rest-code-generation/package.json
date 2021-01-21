@@ -1,0 +1,32 @@
+{
+  "name": "byoskill-fish.net",
+  "version": "1.0.2",
+  "description": "Project to generate a non-regression test harness from a Swagger/OpenAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleroy/spring-crud-generator.git"
+  },
+  "keywords": [
+    "Code",
+    "generator",
+    "Spring",
+    "Crud",
+    "Dto"
+  ],
+  "author": "Sylvain Leroy",
+  "license": "LGPLv3",
+  "bugs": {
+    "url": "https://github.com/sleroy/spring-crud-generator/issues"
+  },
+  "homepage": "https://github.com/sleroy/spring-crud-generator/#readme",
+  "dependencies": {
+    "byoskill-code-generator": "^1.2.9",
+    "npm-check-updates": "^10.2.5",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {}
+}

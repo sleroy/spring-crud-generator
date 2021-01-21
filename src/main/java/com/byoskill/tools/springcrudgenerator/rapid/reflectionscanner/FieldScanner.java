@@ -19,6 +19,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
 /**
  * The type Field scanner performs the conversion of the Class declared fields into a field information model.
  */

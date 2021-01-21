@@ -1,12 +1,12 @@
 package com.byoskill.tools.example;
 
 import lombok.Data;
+import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PositiveOrZero;
-import java.time.LocalDateTime;
-import java.util.List;
+ import java.util.List;
 
 @Entity
 @Data
